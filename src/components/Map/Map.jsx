@@ -3,55 +3,36 @@ import { Component, useState } from 'react'
 import USAMap from 'react-usa-map'
 
 
-/* class Map extends Component { */
-
-  const Map = () => {
-
-  const [stateColor, setStateColor] = useState('white');
-
-    const handleClick = (event) => {
-      // Handle click event
-      console.log(`Clicked on state: ${event.currentTarget.getAttribute('name')}`);
-     };
-    
-     const handleMouseEnter = (event) => {
-      // Handle mouse enter event
-      console.log(`Mouse entered state: ${event.currentTarget.getAttribute('name')}`);
-     };
-    
-     const handleMouseLeave = () => {
-      // Handle mouse leave event
-      console.log('Mouse left a state');
-     };
-  
-  
-
-  /* const statesCustomConfig = () => {
-    //highlight with color inside of map
-
+class App extends Component {
+  /* mandatory */
+  mapHandler = (event) => {
+    alert(event.target.dataset.name);
+  };
+ 
+  /* optional customization of filling per state and calling custom callbacks per state */
+  statesCustomConfig = (props) => {
     return {
       "NJ": {
         fill: "navy",
-        clickHandler:(event) => console.log("new jersey")
+        clickHandler: (event) => console.log('Custom handler for NJ', event.target.dataset)
+      },
+      "NY": {
+        fill: "#CC0000"
       }
-    }
-  } */
-
-
- return(
-  
-    <div>
-    <USAMap 
-    /* customize={statesCustomConfig()} */
-    onClick={handleClick}
-    onUSAStateMouseEnter={handleMouseEnter}
-    onUSAStateMouseLeave={handleMouseLeave}
-    showStateNameOnHover={true}
-    USAStateOnHoverColor="yellow"
-    />
-    <button onClick={handleClick}>Click here</button>
-</div>
-  )
+    };
+  };
+ 
+  render() {
+    return (
+      <div className="App">
+        <USAMap customize={this.statesCustomConfig()} onClick={this.mapHandler} />
+      </div>
+    );
+  }
 }
+ 
 
-export default Map
+  
+
+  
+  export default App;
