@@ -10,17 +10,20 @@ const FlightList = () => {
 
 //Get call
 
+const airport = "IAD";
+const region = "Asia";
+
 
 const fetchFlightData = async () => {
     try {
-    const response = await axios.get('https://cors-anywhere.herokuapp.com/https://seats.aero/partnerapi/availability?take=500', {
-        headers: {
-            accept: 'application/json',
-            'Partner-Authorization': 'pro_2djptjqXao2RuxK5u7UOmUQxUaS'
+    const response = await axios.get('http://localhost:8080/flights', {
+        params: {
+            airport, region
         }
     })
+    console.log(response.data)
     const fullresponse = response.data
-   /*  console.log(fullresponse.data) */
+    console.log(fullresponse.data)
     setFlightData(fullresponse.data)
 } catch (error) {
     console.error(error)
