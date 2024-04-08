@@ -31,18 +31,15 @@ const URL = import.meta.env.VITE_APP_BASE_URL
 const Map = () => {
 
 const [stateData, setStateData] = useState([]);
-console.log(stateData)
 
   const fetchStateData = async () => {
     try {
       const response = await axios.get(`${URL}/states`);
-      console.log(response.data)
       setStateData(response.data)
     } catch (error) {
       console.error(error);
     }
   }
-
 
   useEffect(() => {
     fetchStateData();
@@ -63,7 +60,7 @@ console.log(stateData)
     };
  */
     const handleButtonClick = () => {
-      setProgressState(progressState + .0196);
+      setProgressState(progressState + .09803922);
       setTotalCount(totalCount+1);
     }
 
@@ -80,12 +77,13 @@ console.log(stateData)
     <USAMap 
       state={stateData.state}/>
       <ProgressBar 
-      width={200} percent={progressState}/>
+      width={500} percent={progressState}/>
     <p>{totalCount} / 51</p>
     <div className="stateCard">
     {stateData.map((state, index) => (
       <StateCounter 
       key={index}
+      image={state.image}
       state={state.state}
       description={state.state_description}
       onButtonClick={handleButtonClick}

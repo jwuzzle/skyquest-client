@@ -16,6 +16,7 @@ const StateCounterCard = (props) => {
     <>
       <div className={`card ${flip ? "flip" : ""}`}>
         <div className="front" onClick={() => setFlip(!flip)}>
+          {/* <img src={props.image} className="front" onClick={() => setFlip(!flip)} /> */}
           <p>{props.state}</p>
         </div>
         <div className="back" onClick={() => setFlip(!flip)}>

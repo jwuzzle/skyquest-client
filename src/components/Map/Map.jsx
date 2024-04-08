@@ -10,7 +10,7 @@ class App extends Component {
   };
  
   /* optional customization of filling per state and calling custom callbacks per state */
-  statesCustomConfig = (props) => {
+ /*  statesCustomConfig = (props) => {
     return {
       "NJ": {
         fill: "navy",
@@ -20,12 +20,12 @@ class App extends Component {
         fill: "#CC0000"
       }
     };
-  };
+  }; */
  
   render() {
     return (
       <div className="App">
-        <USAMap customize={this.statesCustomConfig()} onClick={this.mapHandler} />
+        <USAMap /* customize={this.statesCustomConfig()} */ onClick={this.mapHandler} />
       </div>
     );
   }
