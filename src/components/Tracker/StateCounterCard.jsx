@@ -3,14 +3,17 @@ import "./StateCounterCard.scss";
 
 const StateCounterCard = (props) => {
   const [isClicked, setIsClicked] = useState(false);
+  const [statecode, setStatecode] = useState();
+  const [flip, setFlip] = useState(false);
 
   const handleClick = () => {
     props.onButtonClick();
     setIsClicked(true);
+    setStatecode(props.state_code)
   };
+ 
+  console.log(statecode)
 
-  const [flip, setFlip] = useState(false);
-  console.log(flip);
 
   return (
     <>
@@ -21,7 +24,7 @@ const StateCounterCard = (props) => {
         </div>
         <div className="back" onClick={() => setFlip(!flip)}>
           <p className="card__description">{props.description}</p>
-          <button className="card__button" onClick={handleClick} disabled={isClicked}>
+          <button className="card__button" onClick={handleClick} disabled={isClicked} value={props.state_code}>
             Visited
           </button>
         </div>

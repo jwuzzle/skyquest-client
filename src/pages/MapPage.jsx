@@ -49,8 +49,8 @@ const [stateData, setStateData] = useState([]);
 
 
   const [totalCount, setTotalCount] = useState(0)
-
   const [progressState, setProgressState] = useState(0)
+  const [visited, setVisited] = useState(false)
 
  /*   const progressState = {
       percent: 0
@@ -62,9 +62,10 @@ const [stateData, setStateData] = useState([]);
     const handleButtonClick = () => {
       setProgressState(progressState + .09803922);
       setTotalCount(totalCount+1);
+      setVisited(true)
     }
 
-
+console.log(visited)
 
   return (
    <> <div>Map</div>
@@ -85,6 +86,7 @@ const [stateData, setStateData] = useState([]);
       key={index}
       image={state.image}
       state={state.state}
+      state_code={state.state_code}
       description={state.state_description}
       onButtonClick={handleButtonClick}
       />
