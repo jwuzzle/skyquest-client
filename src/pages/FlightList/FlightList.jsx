@@ -72,7 +72,7 @@ const FlightList = () => {
     <>
       <div>FlightList</div>
       <form className="flight-search" onSubmit={onSubmit}>
-        <img className="flight-search__banner" src={airplane} alt="airplane wing in the sky by jannoon028" />
+        {/* <img className="flight-search__banner" src={airplane} alt="airplane wing in the sky by jannoon028" /> */}
         <label htmlFor="origin">Origin:</label>
         <select
           id="origin"
@@ -86,7 +86,7 @@ const FlightList = () => {
           <option value="Europe">Europe</option>
           <option value="Oceania">Oceania</option>
         </select>
-        <label htmlFor="destination">Origin:</label>
+        <label htmlFor="destination">Destination:</label>
         <select
           id="destination"
           value={destination}
@@ -99,7 +99,7 @@ const FlightList = () => {
           <option value="Europe">Europe</option>
           <option value="Oceania">Oceania</option>
         </select>
-        <label htmlFor="source">Origin:</label>
+        <label htmlFor="source">Airline:</label>
         <select
           id="source"
           value={source}
@@ -108,11 +108,15 @@ const FlightList = () => {
           <option value="delta">Delta</option>
           <option value="united">United</option>
           <option value="aeroplan">Air Canada</option>
+          <option value="flyingblue"> Air France</option>
         </select>
         <button>SEARCH</button>
       </form>
-      <FlightTableHeader totalFlights={flightData.length}/>
+      <FlightTableHeader totalFlights={flightData.length} currentPage={currentPage} loading={loading}/>
       <div>
+      {loading ? <h2>Loading...</h2> : ''}
+      </div>
+      <div>  
         {currentFlights.map((flight) => (
           <FlightInfoRow
             key={flight.ID}

@@ -1,9 +1,11 @@
 import './FlightTableHeader.scss'
 
-const FlightTableHeader = (totalFlights) => {
+const FlightTableHeader = ( {totalFlights}) => {
+    console.log(totalFlights)
+    
   return (
     <section>
-    <div className={`table-labels table ${totalFlights === 0 ? `hidden` : ``}`}>
+    <div className={`table-labels ${totalFlights === 0 ? `hidden` : ``}`}>
         <p className="table-labels__date">Date</p>
         <p className="table-labels__origin">Origin Airport</p>
         <p className="table-labels__destination">Destination Airport</p>

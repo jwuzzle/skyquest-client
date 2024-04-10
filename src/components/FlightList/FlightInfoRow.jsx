@@ -3,10 +3,6 @@ import './FlightInfoRow.scss'
 
 const FlightInfoRow = (props) => {
 
-  if(props.loading) {
-    return <h2>Loading...</h2>
-  }
-
   return (
     <section>
     <div className="flightRow">

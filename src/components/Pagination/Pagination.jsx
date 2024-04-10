@@ -5,9 +5,12 @@ const Pagination = ({ totalFlights, flightsPerPage, paginate, currentPage, nextP
   console.log(totalFlights);
   console.log(flightsPerPage);
 
+  const numPages = Math.ceil(totalFlights / flightsPerPage);
   if (totalFlights > 0) {
-    for (let i = 1; i <= Math.ceil(totalFlights / flightsPerPage); i++) {
+    for (let i = 1; i <= numPages; i++) {
+        if (i <=5  || i >= numPages - 5 || Math.abs(currentPage - i) <= 0)
       pageNumbers.push(i);
+      
     }
   }
 
