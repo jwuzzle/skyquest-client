@@ -1,17 +1,19 @@
-import { useState } from 'react'
-import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { useState } from "react";
+import "./App.scss";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import '../styles/partials/_typography.scss'
 
 function App() {
-
   return (
     <>
-    <BrowserRouter>
-      <Routes>
-      </Routes>
-    </BrowserRouter>
+    <p>Hello</p>
+      <BrowserRouter>
+        <Routes>
+        </Routes>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
