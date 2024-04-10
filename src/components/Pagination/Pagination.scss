@@ -1,0 +1,43 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    /* border: 1px solid pink;  */
+
+    &__page-item {
+        list-style-type: none;
+        border: 1px solid #DFE3E8; 
+        width: 32px;
+        height: 32px;
+        border-radius: 4px;
+        text-align: center;
+        cursor: pointer;
+        color: darkgray;
+        margin-left: 2px;
+        line-height: 2;
+    }
+
+    &__page-link {
+        text-decoration: none;
+        color: black;
+    }
+
+}
+
+.active {
+    background-color: teal;
+}
+
+.hidden {
+    display: none;
+}
+
+.nav {
+    width: 35px;
+    border-left: 1px solid #DFE3E8;
+    border-radius: 4px;
+}
+
+.nav-next {
+    border-left: 1px solid #DFE3E8;
+}
