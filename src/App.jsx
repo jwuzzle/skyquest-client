@@ -11,6 +11,7 @@ function App() {
       <BrowserRouter>
       <Header />
         <Routes>
+        <Route path='/' element={<LandingPage />} />
         </Routes>
       </BrowserRouter>
     </>
