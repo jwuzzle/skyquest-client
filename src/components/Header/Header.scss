@@ -76,9 +76,9 @@
         position: absolute;
     }
 
-    @media only screen and (min-width: $tablet-breakpoint) {
+   /*  @media only screen and (min-width: $tablet-breakpoint) { */
         /* margin: 1.5rem 2.25rem; */
-        flex-direction: row;
+      /*   flex-direction: row;
         align-items: center;
 
         &__logo-container {
@@ -112,11 +112,11 @@
             height: 2.5rem;
             right: -0.0625rem;
         }
-    }
+    } */
 
-    @media only screen and (min-width: $desktop-breakpoint) {
+    /* @media only screen and (min-width: $desktop-breakpoint) { */
         /* margin: 1.5rem 9.375rem; */
-    }
+  /*   } */
 }
 
 input[type=text] {
