@@ -1,0 +1,22 @@
+@use "../styles/partials/global";
+
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
+@use "../styles/partials/typography" as *;
+
+.home {
+
+    &__welcome {
+        margin: 36px 24px;
+    }
+
+    &__features {
+        display: flex;
+        flex-direction: column;
+        margin: 36px 24px;
+
+        &--cards {
+            display: flex;
+        }
+    }
+}
