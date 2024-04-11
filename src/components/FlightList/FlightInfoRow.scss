@@ -1,0 +1,66 @@
+.flightRow {
+    display: flex;
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 8px;
+
+    &__date {
+        display: flex;
+        justify-content: flex-start;
+        width: 12%;
+    }
+    &__origin {
+        display: flex;
+        justify-content: flex-start;
+        width: 12%;
+    }
+    &__destination {
+        display: flex;
+        justify-content: flex-start;
+        width: 12%;
+    }
+    &__airline {
+        display: flex;
+        justify-content: flex-start;
+        width: 12%;
+    }
+    &__economy {
+        text-align: center;
+        width: 12%;
+        border-radius: 15px;
+        background-color: rgba(21, 132, 99, 0.07);
+        color: green;
+        text-transform:uppercase;
+        font-weight: 600;
+    }
+    &__premium {
+
+        text-align: center;
+        width: 12%;
+        border-radius: 15px;
+        background-color: rgba(212, 154, 30, 0.07);
+        color: orange;
+        text-transform:uppercase;
+        font-weight: 600;
+
+    }
+    &__business {
+        text-align: center;
+        width: 12%;
+        border-radius: 15px;
+        background-color: rgba(19, 15, 130, 0.07);
+        color: blue;
+        text-transform:uppercase;
+        font-weight: 600;
+    }
+    &__first {
+        text-align: center;
+        width: 12%;
+        border-radius: 15px;
+        background-color: #4c107d12;
+        color: purple;
+        text-transform:uppercase;
+        font-weight: 600;
+    }
+
+}

@@ -1,0 +1,51 @@
+@use "../styles/partials/global";
+
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
+@use "../styles/partials/typography" as *;
+
+.navbar {
+    display: flex;
+   /*  flex-direction: column; */
+    /* margin: none; */
+    background-color: $black;
+    justify-content: space-between;
+
+    &__logo-container {
+        display: flex;
+        justify-content: center;
+        padding-left: 96px;
+    }
+
+    &__logo {
+        height: 100px;
+        width: 120px;
+    }
+
+    &__links {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 96px;
+    }
+
+    &__linkLogin {
+        color: $white;
+       text-decoration: none;
+    }
+
+    &__linkSignup {
+        color: $black;
+        background-color: $white;
+        border: 1px solid $white;
+        border-radius: 4px;
+        text-decoration: none;
+        margin-left: 16px;
+        padding: 5px;
+    }
+
+
+}
+
+
+   
