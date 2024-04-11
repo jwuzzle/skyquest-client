@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Map from './pages/MapPage'
 import FlightListPage from './pages/FlightList/FlightList'
 import "./App.scss";
 import Header from '../src/components/Header/Header'
@@ -16,9 +17,10 @@ function App() {
       <Header />
         <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/flights" element={<FlightListPage />} />
         <Route path='/signup' element={<Authenication />} />
         <Route path='/home' element={<Homepage />} />
+        <Route path="/flights" element={<FlightListPage />} />
+        <Route path='/map' element={<Map />} />
         </Routes>
       </BrowserRouter>
     </>
