@@ -17,9 +17,10 @@ function App() {
       <Header />
         <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/flights" element={<FlightListPage />} />
         <Route path='/signup' element={<Authenication />} />
         <Route path='/home' element={<Homepage />} />
+        <Route path="/flights" element={<FlightListPage />} />
+        <Route path='/map' element={<Map />} />
         </Routes>
       </BrowserRouter>
     </>
