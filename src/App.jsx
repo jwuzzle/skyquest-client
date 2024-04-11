@@ -20,7 +20,7 @@ function App() {
         <Route path='/signup' element={<Authenication />} />
         <Route path='/home' element={<Homepage />} />
         <Route path="/flights" element={<FlightListPage />} />
-        <Route path='/map' element={<Map />} />
+        <Route path='/us-states-challenge' element={<Map />} />
         </Routes>
       </BrowserRouter>
     </>
