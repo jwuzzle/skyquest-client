@@ -25,7 +25,7 @@ const Header = () => {
         </Link>
       </div>
       <section className="navbar__links">
-          <NavLink to={"/login"} className="navbar__linkLogin">  {/* ${location === path ? ('active') : ('') }`}  */}
+          <NavLink to={"/signup"} className="navbar__linkLogin">  {/* ${location === path ? ('active') : ('') }`}  */}
             <div>
               <p>Log in</p>
             </div>

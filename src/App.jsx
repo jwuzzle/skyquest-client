@@ -18,6 +18,7 @@ function App() {
         <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path='/signup' element={<Authenication />} />
+        {/* <Route path='/signup/:view' element={<Authenication />} /> */}
         <Route path='/home' element={<Homepage />} />
         <Route path="/flights" element={<FlightListPage />} />
         <Route path='/us-states-challenge' element={<Map />} />
