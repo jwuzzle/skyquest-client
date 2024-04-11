@@ -1,0 +1,47 @@
+@use "../styles/partials/global";
+
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
+@use "../styles/partials/typography" as *;
+
+
+.challenge {
+    display: flex;
+    flex-direction: column;
+    width: 33vw;
+    padding: 24px;
+    align-items: center;
+
+ &__cards {
+
+    border: 1px solid $black;
+    border-radius: 5px;
+    width: 20vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+
+ }
+    &__image {
+        width: 90px;
+        height: 100px;
+        margin: 16px 0;
+
+    }
+    &__details {
+
+    }
+  &__title {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 18px;
+  }
+   &__description {
+    margin-bottom: 8px;
+   }
+
+}
+        
