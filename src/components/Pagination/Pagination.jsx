@@ -29,7 +29,7 @@ const Pagination = ({ totalFlights, flightsPerPage, paginate, currentPage, nextP
         </li>
         {pageNumbers.map((number) => {
             return (
-          <li key={number} className={`pagination__page-item ${currentPage === number ? `active` : ``}`}>
+          <li key={number} className={`pagination__page-item ${currentPage === number ? `active-pag` : ``}`}>
             <a href="#"onClick={() => paginate(number)} className="pagination__page-link">
               {number}
             </a>
