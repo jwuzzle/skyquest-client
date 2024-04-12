@@ -5,39 +5,20 @@ import Card from "../../components/Homepage/Card/Card";
 import globe from "../../assets/images/globe.jpg";
 import AuthenticatedHeader from "../../components/Header/AuthenticatedHeader";
 import "./Homepage.scss";
-
-const baseURL = "http://localhost:8080";
-const homepageURL = `${baseURL}/home`;
+import { jwtDecode } from "jwt-decode";
 
 const Homepage = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [userInfo, setUserInfo] = useState({});
-
   const token = sessionStorage.getItem("JWTtoken");
+  const decoded = jwtDecode(token);
+  console.log(decoded)
 
   useEffect(() => {
     if (!token) {
       return;
-    }
-    const fetchUserProfile = async () => {
-      try {
-        const response = await axios.get(homepageURL, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
-        console.log(response.data);
+    } else {
         setIsLoading(false);
-        setUserInfo(response.data);
-        console.log(userInfo);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchUserProfile();
-  }, [token]);
-
-  console.log(userInfo)
+  }}, [token]);
 
   return (
     <>
@@ -48,7 +29,7 @@ const Homepage = () => {
         ) : (
           <section className="home">
             <section className="home__top">
-              <h1 className="home__welcome">Welcome, {userInfo.firstname}!</h1>
+              <h1 className="home__welcome">Welcome, {decoded.firstname}!</h1>
               <div className="home__features--flights">
                 <Card
                   header="Your Miles, Your Way."
