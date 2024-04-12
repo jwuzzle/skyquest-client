@@ -13,7 +13,7 @@ const InfoBanner = (props) => {
               src={props.icon}
               alt={props.iconalt}
             />
-            <li className="info__firstsection--values">{props.value1}</li>
+            <li className="info__firstsection--values period-line-breaks"></li>
           </div>
           <div className="info__firstsection--copygroup">
             <img
@@ -21,7 +21,7 @@ const InfoBanner = (props) => {
               src={props.icon}
               alt={props.iconalt}
             />
-            <li className="info__firstsection--values">{props.value2}</li>
+            <li className="info__firstsection--values period-line-breaks"></li>
           </div>
           <div className="info__firstsection--copygroup">
             <img
@@ -29,7 +29,7 @@ const InfoBanner = (props) => {
               src={props.icon}
               alt={props.iconalt}
             />
-            <li className="info__firstsection--values">{props.value3}</li>
+            <li className="info__firstsection--values period-line-breaks"></li>
           </div>
           <div className="info__firstsection--copygroup">
             <img
@@ -37,7 +37,7 @@ const InfoBanner = (props) => {
               src={props.icon}
               alt={props.iconalt}
             />
-            <li className="info__firstsection--values">{props.value4}</li>
+            <li className="info__firstsection--values period-line-breaks"></li>
           </div>
         </ul>
       </div>

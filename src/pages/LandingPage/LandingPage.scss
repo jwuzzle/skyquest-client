@@ -4,6 +4,22 @@
 @use "../styles/partials/mixins" as *;
 @use "../styles/partials/typography" as *;
 
+
+.landingpage {
+
+    &__top-destinations {
+        display: flex;
+        flex-direction: column;
+    }
+}
 .text {
     position: relative;
+}
+
+
+.top-destinations__cards {
+display: flex;
+flex-direction: row;
+justify-content: center;
+
 }

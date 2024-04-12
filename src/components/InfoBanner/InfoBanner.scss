@@ -11,23 +11,25 @@
     &__firstsection {
         display: flex;
         flex-direction: column;
-        width: 40%;
-        padding: 150px 50px 150px 150px;
+        width: 50vw;
+        padding: 90px 36px 90px 132px;
         justify-content: center;
 
         &--header {
-            font-size: 50px;
+            font-size: 40px;
             margin-bottom: 10px;
         }
 
         &--subheader {
             font-size: 30px;
-            margin-bottom: 50px;
+            margin-bottom: 36px;
         }
 
         &--copy {
             display: flex;
             flex-direction: column;
+            color: $charcoalgrey;
+            width: 75%;
         }
 
         &--copygroup {
@@ -35,8 +37,8 @@
         }
 
         &--icon {
-            width: 20px;
-            height: 20px;
+            width: 16px;
+            height: 16px;
             margin: 5px 10px 0 0;
         }
 
@@ -48,7 +50,7 @@
     }
 
     &__secondsection {
-        width: 50%;
+        width: 50vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -56,9 +58,20 @@
         &--image {
             width: 100%;
             max-width: 100%;
-            padding: 0 150px 0 50px;
+            padding: 0 132px 0 36px;
             box-sizing: border-box;
 
         }
+    }
+}
+
+.period-line-breaks {
+    white-space: pre-wrap;
+    &::after {
+        content: 'Explore more, spend less. \A Our tools help you discover the world affordably, connecting you with unforgettable experiences.';
+        content: 'Maximize your points. \A Find the best flight options for your credit card rewards, unlocking endless travel possibilities.';
+        content: 'Embark on exciting challenges and earn rewards! \A Whether it's exploring all states or all continents, we've got adventures for every type of traveler.';
+        content: 'Personalized recommendations. \A Let us guide you to your next dream destination with tailored suggestions based on your preferences.'
+    
     }
 }
