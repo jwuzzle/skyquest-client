@@ -1,15 +1,12 @@
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import flightRow from "../../components/FlightList/FlightInfoRow";
 import FlightInfoRow from "../../components/FlightList/FlightInfoRow";
-import OriginSelectField from "../../components/FormFields/SelectField/OriginSelectField";
-import DestinationSelectField from "../../components/FormFields/SelectField/DestinationSelectField";
-import SourceSelectField from "../../components/FormFields/SelectField/SourceSelectField";
 import Pagination from "../../components/Pagination/Pagination";
 import airplane from "../../assets/images/wing-airplane-flying-sea-island.jpg";
+import FlightTableHeader from "../../components/FlightList/FlightTableHeader/FlightTableHeader";
+import AuthenticatedHeader from "../../components/Header/AuthenticatedHeader";
 import "./FlightList.scss";
-import FlightTableHeader from "../../components/FlightList/FlightTableHeader/FlightTableHeader"
 
 const FlightList = () => {
   const [flightData, setFlightData] = useState([]);
@@ -70,77 +67,99 @@ const FlightList = () => {
 
   return (
     <>
-      <div>FlightList</div>
-      <form className="flight-search" onSubmit={onSubmit}>
-        {/* <img className="flight-search__banner" src={airplane} alt="airplane wing in the sky by jannoon028" /> */}
-        <label htmlFor="origin">Origin:</label>
-        <select
-          id="origin"
-          value={origin}
-          onChange={(e) => setOrigin(e.target.value)}
-        >
-          <option value="North America">North America</option>
-          <option value="South America">South America</option>
-          <option value="Africa">Africa</option>
-          <option value="Asia">Asia</option>
-          <option value="Europe">Europe</option>
-          <option value="Oceania">Oceania</option>
-        </select>
-        <label htmlFor="destination">Destination:</label>
-        <select
-          id="destination"
-          value={destination}
-          onChange={(e) => setDestination(e.target.value)}
-        >
-          <option value="North America">North America</option>
-          <option value="South America">South America</option>
-          <option value="Africa">Africa</option>
-          <option value="Asia">Asia</option>
-          <option value="Europe">Europe</option>
-          <option value="Oceania">Oceania</option>
-        </select>
-        <label htmlFor="source">Airline:</label>
-        <select
-          id="source"
-          value={source}
-          onChange={(e) => setSource(e.target.value)}
-        >
-          <option value="delta">Delta</option>
-          <option value="united">United</option>
-          <option value="aeroplan">Air Canada</option>
-          <option value="flyingblue"> Air France</option>
-        </select>
-        <button>SEARCH</button>
-      </form>
-      <FlightTableHeader totalFlights={flightData.length} currentPage={currentPage} loading={loading}/>
-      <div>
-      {loading ? <h2>Loading...</h2> : ''}
-      </div>
-      <div>  
-        {currentFlights.map((flight) => (
-          <FlightInfoRow
-            key={flight.ID}
-            date={flight.Date}
-            origin={flight.Route.OriginAirport}
-            destination={flight.Route.DestinationAirport}
-            airline={flight.Source}
-            economy={flight.YMileageCost}
-            premium={flight.WMileageCost}
-            business={flight.JMileageCost}
-            first={flight.FMileageCost}
-            loading={loading}
+    <AuthenticatedHeader />
+      <section className="flight-search">
+        <div className="flight-search__container">
+          <img
+            className="flight-search__container--image"
+            src={airplane}
+            alt="airplane wing in the sky by jannoon028"
           />
-        ))}
-      </div>
-      <Pagination
-        flightsPerPage={flightsPerPage}
-        totalFlights={flightData.length}
-        paginate={paginate}
-        prevPage={prevPage}
-        nextPage={nextPage}
-        currentPage={currentPage}
-      />
-      {/*  <button onClick={fetchNextPageData}>NEXT</button> */}
+          <h3 className="flight-search__container--header1">Discover the World.</h3>
+          <h3 className="flight-search__container--header2">Find Flights by Miles.</h3>
+          <form className="flight-search__container--form" onSubmit={onSubmit}>
+            <div className="flight-search__input">
+            <label className="flight-search__input--label" htmlFor="origin">Origin:</label>
+            <select
+              className="flight-search__input--dropdown"
+              id="origin"
+              value={origin}
+              onChange={(e) => setOrigin(e.target.value)}
+            >
+              <option className="dropdown-value" value="North America">North America</option>
+              <option className="dropdown-value" value="South America">South America</option>
+              <option className="dropdown-value" value="Africa">Africa</option>
+              <option className="dropdown-value" value="Asia">Asia</option>
+              <option className="dropdown-value" value="Europe">Europe</option>
+              <option className="dropdown-value" value="Oceania">Oceania</option>
+            </select>
+            </div>
+            <div className="flight-search__input">
+            <label className="flight-search__input--label" htmlFor="destination">Destination:</label>
+            <select
+            className="flight-search__input--dropdown"
+              id="destination"
+              value={destination}
+              onChange={(e) => setDestination(e.target.value)}
+            >
+              <option className="dropdown-value" value="North America">North America</option>
+              <option className="dropdown-value" value="South America">South America</option>
+              <option className="dropdown-value"  value="Africa">Africa</option>
+              <option className="dropdown-value" value="Asia">Asia</option>
+              <option className="dropdown-value" value="Europe">Europe</option>
+              <option className="dropdown-value" value="Oceania">Oceania</option>
+            </select>
+            </div>
+            <div className="flight-search__input">
+            <label className="flight-search__input--label" htmlFor="source">Airline:</label>
+            <select
+            className="flight-search__input--dropdown"
+              id="source"
+              value={source}
+              onChange={(e) => setSource(e.target.value)}
+            >
+              <option className="dropdown-value" value="delta">Delta</option>
+              <option className="dropdown-value" value="united">United</option>
+              <option className="dropdown-value" value="aeroplan">Air Canada</option>
+              <option className="dropdown-value" value="flyingblue"> Air France</option>
+            </select>
+            </div>
+            <button className="flight-search__input--button">SEARCH</button>
+          </form>
+        </div>
+        <h1>Flights</h1>
+        <FlightTableHeader
+          totalFlights={flightData.length}
+          currentPage={currentPage}
+          loading={loading}
+        />
+        <div>{loading ? <h2>Loading...</h2> : ""}</div>
+        <div>
+          {currentFlights.map((flight) => (
+            <FlightInfoRow
+              key={flight.ID}
+              date={flight.Date}
+              origin={flight.Route.OriginAirport}
+              destination={flight.Route.DestinationAirport}
+              airline={flight.Source}
+              economy={flight.YMileageCost}
+              premium={flight.WMileageCost}
+              business={flight.JMileageCost}
+              first={flight.FMileageCost}
+              loading={loading}
+            />
+          ))}
+        </div>
+        <Pagination
+          flightsPerPage={flightsPerPage}
+          totalFlights={flightData.length}
+          paginate={paginate}
+          prevPage={prevPage}
+          nextPage={nextPage}
+          currentPage={currentPage}
+        />
+        {/*  <button onClick={fetchNextPageData}>NEXT</button> */}
+      </section>
     </>
   );
 };

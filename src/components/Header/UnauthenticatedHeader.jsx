@@ -1,15 +1,22 @@
 import "./Header.scss";
 import skyquestLogo from "../../assets/logos/skyquest-white.svg";
 import { Link, NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const Header = () => {
 
-  const jwt = sessionStorage.getItem('JWTtoken')
-  if (jwt) {
+  const [jwt, setJwt] = useState(false)
+
+  useEffect(() => {
+  const token = sessionStorage.getItem('JWTtoken')
+  if (token) {
     console.log('JWT token found in sessionStorage:', jwt);
+    setJwt(true);
   } else {
     console.log('JWT token not found');
+    setJwt(false);
   }
+}, [jwt]);
 
   return (
     <header className="navbar">
@@ -25,7 +32,7 @@ const Header = () => {
         </Link>
       </div>
       <section className="navbar__links">
-          <NavLink to={"/signup"} className="navbar__linkLogin">  {/* ${location === path ? ('active') : ('') }`}  */}
+          <NavLink to={"/login"} className="navbar__linkLogin">  {/* ${location === path ? ('active') : ('') }`}  */}
             <div>
               <p>Log in</p>
             </div>

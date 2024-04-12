@@ -1,27 +1,25 @@
-import { useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Map from './pages/MapPage'
-import FlightListPage from './pages/FlightList/FlightList'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Map from "./pages/MapPage";
+import FlightListPage from "./pages/FlightList/FlightList";
+import LandingPage from "../src/pages/LandingPage/LandingPage";
+import Homepage from "../src/pages/Homepage/Homepage";
+import Login from "../src/pages/Login/Login";
+import Signup from "../src/pages/Signup/Signup";
+import "../styles/partials/_typography.scss";
 import "./App.scss";
-import Header from '../src/components/Header/Header'
-import LandingPage from '../src/pages/LandingPage/LandingPage'
-import Authenication from '../src/Authentication'
-import '../styles/partials/_typography.scss'
-import Homepage from '../src/pages/Homepage/Homepage'
-
 
 function App() {
   return (
     <>
       <BrowserRouter>
-      <Header />
         <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path='/signup' element={<Authenication />} />
-        {/* <Route path='/signup/:view' element={<Authenication />} /> */}
-        <Route path='/home' element={<Homepage />} />
-        <Route path="/flights" element={<FlightListPage />} />
-        <Route path='/us-states-challenge' element={<Map />} />
+          <Route path="/" element={<LandingPage />} />
+         {/*  <Route path="/signup" element={<Authenication />} /> */}
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/home" element={<Homepage />} />
+          <Route path="/flights" element={<FlightListPage />} />
+          <Route path="/us-states-challenge" element={<Map />} />
         </Routes>
       </BrowserRouter>
     </>
