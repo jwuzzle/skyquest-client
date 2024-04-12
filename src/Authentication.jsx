@@ -4,7 +4,7 @@ import Homepage from "../src/pages/Homepage/Homepage";
 import { Routes, Route, useParams } from "react-router-dom";
 
 const baseURL = "http://localhost:8080";
-const signupURL = `${baseURL}/signup`;
+const signupURL = `${baseURL}/users`;
 const loginURL = `${baseURL}/login`;
 
 const Authentication = () => {
@@ -15,18 +15,9 @@ const Authentication = () => {
   const [isLoginError, setIsLoginError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  /* useEffect(() => {
-    console.log(view);
-    if (view == 1) {
-        console.log("login", view);
+ /*  if (view == 1) setIsLoggedIn(false);
+  if (view == 2) setIsSignedUp(false); */
 
-      setIsLoggedIn(true);
-    } else if (view == 2) {
-        console.log(" sign up", view);
-
-      setIsSignedUp(true);
-    }
-  }, []); */
 
   const handleSignup = async (event) => {
     event.preventDefault();
@@ -34,9 +25,11 @@ const Authentication = () => {
     //POST request to signupURL with user entered data
     try {
       await axios.post(signupURL, {
+        first_name: event.target.first_name.value,
+        last_name: event.target.last_name.value,
         username: event.target.username.value,
-        name: event.target.name.value,
-        password: event.target.password.value,
+        email: event.target.email.value,
+        password_hash: event.target.password_hash.value,
       });
       setIsSignedUp(true);
     } catch (error) {
@@ -53,7 +46,7 @@ const Authentication = () => {
     try {
       const response = await axios.post(loginURL, {
         username: event.target.username.value,
-        password: event.target.password.value,
+        password_hash: event.target.password.value,
       });
       sessionStorage.setItem("JWTtoken", response.data.token);
       setIsLoggedIn(true);
@@ -75,7 +68,13 @@ const Authentication = () => {
           Username: <input type="text" name="username" />
         </div>
         <div className="form__input">
-          Name: <input type="text" name="name" />
+          First Name: <input type="text" name="first_name" />
+        </div>
+        <div className="form__input">
+          Last Name: <input type="text" name="last_name" />
+        </div>
+        <div className="form__input">
+          Email: <input type="email" name="email" />
         </div>
         <div className="form__input">
           Password: <input type="password" name="password" />
@@ -116,6 +115,8 @@ const Authentication = () => {
 
   if (!isSignedUp) return renderSignUp();
   if (!isLoggedIn) return renderLogin();
+ 
+
 
   return (
     <>

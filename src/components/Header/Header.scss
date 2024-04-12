@@ -6,6 +6,61 @@
 
 .navbar {
     display: flex;
+    flex-direction: column;
+    background-color: $black;
+    justify-content: space-between;
+
+    &__logo-container {
+        display: flex;
+        justify-content: center;
+        height: 45px;
+    }
+
+    &__logo {
+        height: 50px;
+        width: 60px;
+        transform: scale(1.5);
+    }
+
+    &__links {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 50px;
+    }
+
+    &__linkLogin {
+        @include labels-buttons-mobile;
+        color: $white;
+       text-decoration: none;
+    }
+
+    &__linkSignup {
+        @include labels-buttons-mobile;
+        color: $black;
+        background-color: $white;
+        border: 1px solid $white;
+        border-radius: 4px;
+        text-decoration: none;
+        margin-left: 16px;
+        padding: 3px;
+    }
+
+    &__link {
+        color: $white;
+        text-decoration: none;
+        margin-left: 16px;
+    }
+
+
+
+    @media only screen and (min-width: $tablet-breakpoint) {
+
+        
+    }
+
+    @media only screen and (min-width: $desktop-breakpoint) {
+    display: flex;
    /*  flex-direction: column; */
     /* margin: none; */
     background-color: $black;
@@ -50,6 +105,7 @@
         text-decoration: none;
         margin-left: 16px;
     }
+}
 }
 
 .active {

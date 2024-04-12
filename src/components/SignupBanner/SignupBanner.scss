@@ -7,6 +7,13 @@
 
 
 .signup-banner {
+
+    @media only screen and (min-width: $tablet-breakpoint) {
+
+        
+    }
+
+    @media only screen and (min-width: $desktop-breakpoint) {
     background-color: $black;
     margin-bottom: 36px;
     height: 300px;
@@ -44,5 +51,5 @@
         margin: 16px;
         padding: 15px;
     }
-
+    }
 }

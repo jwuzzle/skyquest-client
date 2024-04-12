@@ -6,10 +6,30 @@
 
 
 .landingpage {
+    display: flex;
+    flex-direction: column;
 
     &__top-destinations {
         display: flex;
         flex-direction: column;
+    }
+
+    @media only screen and (min-width: $tablet-breakpoint) {
+
+        
+    }
+
+    @media only screen and (min-width: $desktop-breakpoint) {
+
+        display: flex;
+    flex-direction: column;
+
+    
+
+    &__top-destinations {
+        display: flex;
+        flex-direction: column;
+    }
     }
 }
 .text {
@@ -18,8 +38,19 @@
 
 
 .top-destinations__cards {
+    display: flex;
+flex-direction: column;
+justify-content: center;
+
+    @media only screen and (min-width: $tablet-breakpoint) {
+
+        
+    }
+
+    @media only screen and (min-width: $desktop-breakpoint) {
 display: flex;
 flex-direction: row;
 justify-content: center;
 
+}
 }

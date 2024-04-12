@@ -1,4 +1,5 @@
 import LandingPageBanner from "../../components/LandingPageBanner/LandingPageBanner";
+import UnauthenticatedHeader from "../../components/Header/UnauthenticatedHeader"
 import InfoBanner from "../../components/InfoBanner/InfoBanner";
 import SignupBanner from "../../components/SignupBanner/SignupBanner";
 import DestinationCard from "../../components/Cards/DestinationCards/DestinationCards";
@@ -10,6 +11,8 @@ import "./LandingPage.scss";
 const LandingPage = () => {
   return (
     <div className="landingpage">
+    <div>
+      <UnauthenticatedHeader />
       <LandingPageBanner
         video={landingVideo}
         title="Adventure Awaits: Let's Build Memories Beyond Imagination"
@@ -22,7 +25,6 @@ const LandingPage = () => {
         iconalt="airplane icon"
         imagalt="laptop with travel images"
       />
-      <SignupBanner header="Ready for an adventure?" />
       <section className="landingpage__top-destinations">
         <h1>Top Destinations</h1>
         <div className="top-destinations__cards">
@@ -37,24 +39,8 @@ const LandingPage = () => {
           description="Fthe ancient Incan citadel cradled amidst the Andes. Its majestic ruins, shrouded in mist, evoke a sense of wonder and mystery. Trek through rugged landscapes to reach this sacred site, where llamas roam and history whispers through the stone walls. Machu Picchu enchants with its breathtaking beauty, leaving visitors spellbound by its ancient allure." />
         </div>
       </section>
-
-      <div>
-        <p className="text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac ante
-          nec risus fermentum pharetra. Quisque ut volutpat libero. Nullam
-          tincidunt, leo at tempus fermentum, libero felis cursus mi, eu
-          vehicula magna eros id justo. In hac habitasse platea dictumst. Sed ac
-          dapibus odio. Nullam in quam ac purus fermentum semper. Vivamus in
-          diam eu libero tincidunt suscipit eget et odio. Sed accumsan quam
-          vitae neque rutrum, a suscipit magna varius. Maecenas nec tortor sed
-          libero condimentum vehicula. Curabitur dapibus justo vel libero
-          malesuada efficitur. Donec vitae justo ac justo interdum semper.
-          Curabitur vel sapien ac magna sodales sollicitudin. Nam id risus id
-          lorem pellentesque auctor. Maecenas et diam vitae eros ultricies
-          convallis eget id metus. Sed vel lorem non risus tincidunt congue eget
-          id libero. Nunc lobortis libero nec faucibus tincidunt.
-        </p>
-      </div>
+      <SignupBanner header="Ready for an adventure?" />
+    </div>
     </div>
   );
 };
