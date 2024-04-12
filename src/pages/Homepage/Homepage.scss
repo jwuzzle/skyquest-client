@@ -6,7 +6,13 @@
 
 .home {
 
+    &__top {
+        display: flex;
+        flex-direction: column;
+    }
+
     &__welcome {
+        font-size: 72px;
         margin: 36px 24px;
     }
 
@@ -17,6 +23,12 @@
 
         &--cards {
             display: flex;
+        }
+
+        &--flights {
+            display: flex;
+            justify-content: flex-end;
+            margin: 0 24px;
         }
     }
 }

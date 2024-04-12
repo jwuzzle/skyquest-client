@@ -1,4 +1,5 @@
 import LandingPageBanner from "../../components/LandingPageBanner/LandingPageBanner";
+import UnauthenticatedHeader from "../../components/Header/UnauthenticatedHeader"
 import InfoBanner from "../../components/InfoBanner/InfoBanner";
 import SignupBanner from "../../components/SignupBanner/SignupBanner";
 import landingVideo from "../../assets/videos/landing_page_video.mp4";
@@ -9,6 +10,7 @@ import "./LandingPage.scss";
 const LandingPage = () => {
   return (
     <div>
+      <UnauthenticatedHeader />
       <LandingPageBanner
         video={landingVideo}
         title="Adventure Awaits: Let's Build Memories Beyond Imagination"
