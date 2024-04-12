@@ -13,6 +13,7 @@ const StateCounterCard = (props) => {
   };
  
   console.log(statecode)
+  console.log(isClicked)
 
 
   return (
@@ -24,7 +25,7 @@ const StateCounterCard = (props) => {
         </div>
         <div className="back" onClick={() => setFlip(!flip)}>
           <p className="card__description">{props.description}</p>
-          <button className="card__button" onClick={handleClick} disabled={isClicked} value={props.state_code}>
+          <button className="card__button" onClick={handleClick} checked={props.check} disabled={isClicked} value={props.state_code}>
             Visited
           </button>
         </div>
