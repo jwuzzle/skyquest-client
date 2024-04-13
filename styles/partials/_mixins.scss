@@ -14,19 +14,19 @@
 //mobile font styles
 
 @mixin video-overlay-mobile {
-    font-size: 1rem;
-    line-height: 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
     font-weight: 700;
 }
 
 @mixin page-header-mobile {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 2rem;
     font-weight: 700;
 }
 
 @mixin section-header-mobile {
-    font-size: 0.8125rem;
+    font-size: 1rem;
     line-height: 1.25rem;
     font-weight: 700;
 }
