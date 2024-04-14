@@ -5,11 +5,18 @@
 @use "../styles/partials/typography" as *;
 
 
-.state__cards {
+.state-cards {
    display: flex;
-   flex-wrap: wrap;
-    /* border: 1xp solid black;
-    width: 35%; */
     justify-content: center;
     
+
+
+    @media only screen and (min-width: $tablet-breakpoint) {
+        padding: 18px 24px 24px 24px;
+        flex-wrap: wrap;
+    }
+
+    @media only screen and (min-width: $desktop-breakpoint) {
+       
+    }
 }
