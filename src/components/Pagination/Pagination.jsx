@@ -16,9 +16,6 @@ const Pagination = ({ totalFlights, flightsPerPage, paginate, currentPage, nextP
 
   console.log(pageNumbers);
 
-
-
-
   return (
     <nav>
       <ul className={`pagination ${totalFlights === 0 ? `hidden` : ``}`}>
@@ -30,7 +27,7 @@ const Pagination = ({ totalFlights, flightsPerPage, paginate, currentPage, nextP
         {pageNumbers.map((number) => {
             return (
           <li key={number} className={`pagination__page-item ${currentPage === number ? `active-pag` : ``}`}>
-            <a href="#"onClick={() => paginate(number)} className="pagination__page-link">
+            <a href="javascript:void(0)" onClick={() => paginate(number)} className="pagination__page-link">
               {number}
             </a>
           </li>
