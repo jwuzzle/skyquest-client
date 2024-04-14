@@ -7,16 +7,22 @@
 
 .description {
     display: flex;
+    padding: 24px 16px 16px 16px;
+    margin-top: 60px;
 
     &__copy {
+        @include body-copy-mobile;
     }
 
     @media only screen and (min-width: $tablet-breakpoint) {
-        
+        @include body-copy;
+        padding: 18px 36px 24px 36px;
+        margin-top: 24px
     }
 
     @media only screen and (min-width: $desktop-breakpoint) {
-       
+        padding: 18px 96px 24px 96px;
+        margin-top: 24px
     }
 
 }

@@ -4,99 +4,6 @@
 @use "../styles/partials/mixins" as *;
 @use "../styles/partials/typography" as *;
 
-button:disabled {
-    background-color: aquamarine;
-}
-
-/* .state-card {
-    border: 1px solid black;
-    border-radius: 5px;
-    margin: 5px;
-    position: relative;
-    transform: rotateY(var(--rotate-y, 0)) perspective(1000px);
-    transform-style: preserve-3d;
-    transition: 150ms;
-
-    &__front {
-        position: absolute;
-        backface-visibility: hidden;
-    }
-
-    &__back {
-        position: absolute;
-        transform: rotateY('180');
-        backface-visibility: hidden;
-    }
-}
-
-.card {
-    border: 1px solid black;
-    border-radius: 5px;
-    margin: 5px;
-    position: relative;
-    transform: rotateY(var(--rotate-y, 0)) perspective(1000px);
-    transform-style: preserve-3d;
-    transition: 150ms;
-}
-
-.card .flip {
-    --rotate-y: 180deg;
-} */
-
-/* .card {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    border-radius: 0.35rem;
-    background-color: lightblue;
-    transform-style: preserve-3d;
-    transition: 150ms;
-    cursor: pointer;
-    transform: perspective(1000px) rotateY(var(--rotate-y, 0))
-        translateY(var(--translate-y, 0));
-    margin: 16px;
-}
-
-.card:hover {
-    --translate-y: -2px;
-    opacity: 1;
-}
-
-.card.flip {
-    --rotate-y: 180deg;
-}
-
-.card .font {
-    /* left: 0; */
-/* } */
-
-/* .card .front,
-.card .back {
-    display: flex;
-    position: aboslute;
-    padding: 1rem;
-    backface-visibility: hidden;
-    width: fit-content;
-    justify-content: center;
-    align-items: center;
-}
-
-.card .back {
-    transform: rotateY(180deg);
-    display: flex;
-}
-
-.card .back p {
-    width: 100%;
-}
-
-
-.card__description {
-    width: 100%;
-}
- */
 
 .card__button .on {
     color: blue;
@@ -110,11 +17,11 @@ button.card__button.off {
 
 img.card__complete-icon.on {
     position: absolute;
-      inset: auto auto 10px 220px;
+      inset: auto auto 10px 170px;
       margin: 0;
       transition: inset .3s .3s ease-out;
-    width: 60px;
-    height: 50px;
+    width: 40px;
+    height: 30px;
 
 }
 
@@ -128,12 +35,12 @@ display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding: 24px 16px;
   }
   
   .state-card {
-    width: 18rem;
-    height: 12rem;
+    width: 14rem;
+    height: 9rem;
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
@@ -160,6 +67,7 @@ display: none;
       transition: inset .3s .3s ease-out;
       font-weight: normal;
       text-transform: uppercase;
+      @include subheader-mobile;
     }
     
     p {
@@ -168,6 +76,7 @@ display: none;
       max-width: 80%;
       transition: opacity .3s ease-out;
       inset: auto auto 40px 15px;
+      @include body-copy-mobile;
     }
     
     
@@ -180,6 +89,7 @@ display: none;
       opacity: 0;
       max-width: 80%;
       transition: opacity .3s ease-out;
+      @include body-copy-mobile;
     }
     
     &:hover h2 {

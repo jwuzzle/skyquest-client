@@ -8,6 +8,7 @@ import ChallengeBanner from "../components/Banners/ChallengeBanner";
 import AuthenticatedHeader from "../components/Header/AuthenticatedHeader";
 import { jwtDecode } from "jwt-decode";
 import statesData from "../data/states.json";
+import Description from "../components/TextComponents/Descriptions/Description"
 
 const URL = import.meta.env.VITE_APP_BASE_URL;
 
@@ -299,11 +300,11 @@ const Map = () => {
       <AuthenticatedHeader />
       <ChallengeBanner
         image={usMapImage}
-        text="outline of the United States in red, white and blue: created by Allexxander"
-        header="Conquer the 51-State Challenge: Explore Every Corner of the USA!"
-        description="Embark on the ultimate lifetime challenge: visit all 51 states in the United States. But here's the catch: mere pass-throughs won't suffice. Dive deep into each state's culture, landscapes, and history. From bustling cities to serene countryside, explore every corner of your country. Our user-friendly interface lets you easily check off each state as you visit, while a progress bar tracks your journey towards the ultimate goal. Pack your bags, plot your route, and get ready for the adventure of a lifetime, one state at a time."
+        text="Map of the usa with key landmarks on top of the map."
+        header="Explore the United States Challenge"
       />
-      <div className="stateCard">
+      <Description description="Embark on a journey across the United States and explore the rich tapestry of each state's culture, history, and natural wonders. From the majestic Grand Canyon to the vibrant streets of New York City, there's endless adventure awaiting you. As you explore each state, come back here and mark it off the list by clicking on the cards below. Once you've explored all of the US, you'll earn extra reward miles! Get ready to discover the beauty and diversity of America's states in this thrilling challenge!" />
+      <div className="state-cards">
         <StateCounter
           state={statesData[0].state}
           state_code={statesData[0].state_code}

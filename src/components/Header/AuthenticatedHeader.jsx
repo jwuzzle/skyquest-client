@@ -39,6 +39,11 @@ const AuthenticatedHeader = () => {
             <p>Flights</p>
           </div>
         </NavLink>
+        <NavLink to={"/challenges"} className="navbar__link">
+          <div>
+            <p>Challenges</p>
+          </div>
+        </NavLink>
       </section>
     </header>
   );
