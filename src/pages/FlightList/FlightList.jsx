@@ -38,6 +38,8 @@ const FlightList = () => {
     }
   };
 
+  localStorage.setItem('flightData', flightData)
+
   //Get current flights
 
   const indexOfLastFlight = currentPage * flightsPerPage;
@@ -124,16 +126,18 @@ const FlightList = () => {
               <option className="dropdown-value" value="flyingblue"> Air France</option>
             </select>
             </div>
+            <div className="flight-search__input--button-container">
             <button className="flight-search__input--button">SEARCH</button>
+            </div>
           </form>
         </div>
-        <h1>Flights</h1>
+        <div className="flight-search__results-header">{loading ? "" : ""}</div>
         <FlightTableHeader
           totalFlights={flightData.length}
           currentPage={currentPage}
           loading={loading}
         />
-        <div>{loading ? <h2>Loading...</h2> : ""}</div>
+        <div>{loading ? <h2 className="loading">Getting ready for take off...</h2> : ""}</div>
         <div>
           {currentFlights.map((flight) => (
             <FlightInfoRow
@@ -158,7 +162,6 @@ const FlightList = () => {
           nextPage={nextPage}
           currentPage={currentPage}
         />
-        {/*  <button onClick={fetchNextPageData}>NEXT</button> */}
       </section>
     </>
   );
@@ -166,43 +169,3 @@ const FlightList = () => {
 
 export default FlightList;
 
-{
-  /* <p key={flight.ID}>
-        {flight.Date}
-        {flight.Route.OriginAirport}
-        {flight.Route.DestinationAirport}
-        {flight.Source}
-        {flight.YMileageCost}
-        {flight.WMileageCost}
-        {flight.JMileageCost}
-        {flight.FMileageCost}
-        </p> */
-}
-
-{
-  /* <form>
-        <OriginSelectField 
-         id="origin"
-        />
-        <DestinationSelectField 
-        id="destination"
-        />
-        <SourceSelectField 
-        id="source"
-        />
-      {/* <button onClick={fetchFlightData}>SEARCH</button>  */
-}
-{
-  /* </form> */
-}
-{
-  /* */
-}
-{
-  /*  */
-}
-
-/* // do not need this in order for search button to work to initial the get request
-useEffect(() => {
-    fetchFlightData()
-  }, []) */

@@ -1,68 +1,145 @@
+@use "../styles/partials/global";
+
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
+@use "../styles/partials/typography" as *;
+
+.table__header {
+    @include section-header-mobile;
+    @media only screen and (min-width: $tablet-breakpoint) {
+        @include section-header;
+        border-top: none;
+        margin-left: 36px;
+    }
+    @media only screen and (min-width: $desktop-breakpoint) {
+        margin-left: 96px;
+    }
+
+}
+
 .table-labels  {
+    display: none;
+
+    @media only screen and (min-width: $tablet-breakpoint) {
     display: flex;
+    border-bottom: 1px solid black;
+    margin: 36px 36px 0 36px;
     justify-content: space-around;
-    font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid black;
-    margin-top: 36px;
 
     &__date {
+        @include body-copy;
         display: flex;
-        justify-content: flex-start;
-        width: 12%;
+        align-items: center;
+        width: 100px;
+        font-weight: 600;
     }
     &__origin {
+        @include body-copy;
         display: flex;
-        justify-content: flex-start;
-        width: 12%;
+        align-items: center;
+        width: 100px;
+        font-weight: 600;
     }
     &__destination {
+        @include body-copy;
+        line-height: 1rem;
+        align-items: center;
         display: flex;
-        justify-content: flex-start;
-        width: 12%;
+        width: 100px;
+        font-weight: 600;
     }
-    &__airline {
-        display: flex;
-        justify-content: flex-start;
-        width: 12%;
-    }
+    
     &__economy {
+        @include body-copy;
         text-align: center;
-        width: 12%;
+        width: 100px;
         border-radius: 15px;
-        background-color: rgba(21, 132, 99, 0.07);
         color: green;
         text-transform:uppercase;
         font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    &__premium {
 
+    &__premium {
+        @include body-copy;
         text-align: center;
-        width: 12%;
+        width: 100px;
         border-radius: 15px;
-        background-color: rgba(212, 154, 30, 0.07);
         color: orange;
         text-transform:uppercase;
         font-weight: 600;
-
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+
     &__business {
+        @include body-copy;
         text-align: center;
-        width: 12%;
+        width: 100px;
         border-radius: 15px;
-        background-color: rgba(19, 15, 130, 0.07);
         color: blue;
         text-transform:uppercase;
         font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+
     &__first {
+        @include body-copy;
         text-align: center;
-        width: 12%;
+        width: 100px;
         border-radius: 15px;
-        background-color: #4c107d12;
         color: purple;
         text-transform:uppercase;
         font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+}
+@media only screen and (min-width: $desktop-breakpoint) {
+    justify-content: space-between;
+    margin: 36px 96px 0 96px;
+
+    &__date {
+        width: 150px;
+    }
+
+    &__origin {
+        width: 150px;
+
+    }
+
+    &__destination {
+        width: 150px;
+
+    }
+
+    &__economy {
+        width: 150px;
+      
+    }
+    &__premium {
+        width: 150px;
+       
+    }
+
+    &__business {
+        width: 150px;
+
+    }
+
+    &__first {
+        width: 150px;
+
+    }
+
+}
+
 }
 
 .hidden {
