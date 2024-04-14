@@ -1,0 +1,359 @@
+[
+    {
+      "id": 1,
+      "state": "Alabama",
+      "state_code": "al",
+      "state_description": "Alabama has a land area of 50,633.2 square miles and a water area of 1,773.0 square miles. It is the 28th largest state by area.",
+      "image": "/states/al.jpg"
+  },
+    {
+      "id": 2,
+      "state": "Alaska",
+      "state_code": "ak",
+      "state_description": "Alaska has a land area of 570,865.8 square miles and a water area of 94,722.2 square miles. It is the 1st largest state by area.",
+      "image": "/states/ak.jpg"
+  },
+    {
+      "id": 3,
+      "state": "Arizona",
+      "state_code": "az",
+      "state_description": "Arizona has a land area of 113,623.1 square miles and a water area of 331.8 square miles. It is the 6th largest state by area.",
+      "image": "/states/az.jpg"
+  },
+    {
+      "id": 4,
+      "state": "Arkansas",
+      "state_code": "ar",
+      "state_description": "Arkansas has a land area of 52,023.8 square miles and a water area of 1,141.2 square miles. It is the 27th largest state by area.",
+      "image": "/states/ar.jpg" 
+  },
+    {
+      "id": 5,
+      "state": "California",
+      "state_code": "ca",
+      "state_description": "California has a land area of 155,812.8 square miles and a water area of 7,837.9 square miles. It is the 3rd largest state by area.",
+      "image": "/states/ca.jpg"
+    },
+    {
+      "id": 6,
+      "state": "Colorado",
+      "state_code": "co",
+      "state_description": "Colorado has a land area of 103,610.1 square miles and a water area of 457.3 square miles. It is the 8th largest state by area.",
+      "image": "/states/co.jpg" 
+    },
+    {
+      "id": 7,
+      "state": "Connecticut",
+      "state_code": "ct",
+      "state_description": "Connecticut has a land area of 4,841.4 square miles and a water area of 700.8 square miles. It is the 48th largest state by area.",
+      "image": "/states/ct.jpg"
+    },
+    {
+      "id": 8,
+      "state": "Delaware",
+      "state_code": "de",
+      "state_description": "Delaware has a land area of 1,948.0 square miles and a water area of 540.1 square miles. It is the 49th largest state by area.",
+      "image": "/states/de.jpg"
+    },
+    {
+      "id": 9,
+      "state": "District of Columbia",
+      "state_code": "dc",
+      "state_description": "District of Columbia has a land area of 61.1 square miles and a water area of 7.2 square miles. It is the 51st largest state by area.",
+      "image": "/states/dc.jpg"
+    },
+    {
+      "id": 10,
+      "state": "Florida",
+      "state_code": "fl",
+      "state_description": "Florida has a land area of 53,633.7 square miles and a water area of 12,106.1 square miles. It is the 26th largest state by area.",
+      "image": "/states/fl.jpg"
+    },
+    {
+      "id": 11,
+      "state": "Georgia",
+      "state_code": "ga",
+      "state_description": "Georgia has a land area of 57,701.1 square miles and a water area of 1,706.3 square miles. It is the 21st largest state by area.",
+      "image": "/states/ga.jpg"
+    },
+    {
+      "id": 12,
+      "state": "Hawaii",
+      "state_code": "hi",
+      "state_description": "Hawaii has a land area of 6,420.7 square miles and a water area of 4,546.2 square miles. It is the 47th largest state by area.",
+      "image": "/states/hi.jpg"
+    },
+    {
+      "id": 13,
+      "state": "Idaho",
+      "state_code": "id",
+      "state_description": "Idaho has a land area of 82,623.3 square miles and a water area of 923.2 square miles. It is the 11th largest state by area.",
+      "image": "/states/id.jpg"
+    },
+    {
+      "id": 14,
+      "state": "Illinois",
+      "state_code": "il",
+      "state_description": "Illinois has a land area of 55,499.0 square miles and a water area of 2,399.3 square miles. It is the 24th largest state by area.",
+      "image": "/states/il.jpg"
+    },
+    {
+      "id": 15,
+      "state": "Indiana",
+      "state_code": "in",
+      "state_description": "Indiana has a land area of 35,817.0 square miles and a water area of 593.4 square miles. It is the 38th largest state by area.",
+      "image": "/states/in.jpg"
+    },
+    {
+      "id": 16,
+      "state": "Iowa",
+      "state_code": "ia",
+      "state_description": "Iowa has a land area of 55,838.9 square miles and a water area of 418.8 square miles. It is the 23rd largest state by area.",
+      "image": "/states/ia.jpg"
+    },
+    {
+      "id": 17,
+      "state": "Kansas",
+      "state_code": "ks",
+      "state_description": "Kansas has a land area of 81,736.8 square miles and a water area of 519.6 square miles. It is the 13th largest state by area.",
+      "image": "/states/ks.jpg"
+    },
+    {
+      "id": 18,
+      "state": "Kentucky",
+      "state_code": "ky",
+      "state_description": "Kentucky has a land area of 39,480.9 square miles and a water area of 915.8 square miles. It is the 36th largest state by area.",
+      "image": "/states/ky.jpg"
+    },
+    {
+      "id": 19,
+      "state": "Louisiana",
+      "state_code": "la",
+      "state_description": "Louisiana has a land area of 43,193.1 square miles and a water area of 9,168.3 square miles. It is the 33rd largest state by area.",
+      "image": "/states/la.jpg"
+    },
+    {
+      "id": 20,
+      "state": "Maine",
+      "state_code": "me",
+      "state_description": "Maine has a land area of 30,836.6 square miles and a water area of 4,533.8 square miles. It is the 39th largest state by area.",
+      "image": "/states/me.jpg"
+    },
+    {
+      "id": 21,
+      "state": "Maryland",
+      "state_code": "md",
+      "state_description": "Maryland has a land area of 9,708.6 square miles and a water area of 2,694.0 square miles. It is the 42nd largest state by area.",
+      "image": "/states/md.jpg"
+    },
+    {
+      "id": 22,
+      "state": "Massachusetts",
+      "state_code": "ma",
+      "state_description": "Massachusetts has a land area of 7,798.9 square miles and a water area of 2,752.4 square miles. It is the 45th largest state by area.",
+      "image": "/states/ma.jpg"
+    },
+    {
+      "id": 23,
+      "state": "Michigan",
+      "state_code": "mi",
+      "state_description": "Michigan has a land area of 56,591.0 square miles and a water area of 40,097.0 square miles. It is the 22nd largest state by area.",
+      "image": "/states/mi.jpg"
+    },
+    {
+      "id": 24,
+      "state": "Minnesota",
+      "state_code": "mn",
+      "state_description": "Minnesota has a land area of 79,604.8 square miles and a water area of 7,311.7 square miles. It is the 14th largest state by area.",
+      "image": "/states/mn.jpg"
+    },
+    {
+      "id": 25,
+      "state": "Mississippi",
+      "state_code": "ms",
+      "state_description": "Mississippi has a land area of 46,913.1 square miles and a water area of 1,514.6 square miles. It is the 31st largest state by area.",
+      "image": "/states/ms.jpg"
+    },
+    {
+      "id": 26,
+      "state": "Missouri",
+      "state_code": "mo",
+      "state_description": "Missouri has a land area of 68,727.3 square miles and a water area of 960.9 square miles. It is the 18th largest state by area.",
+      "image": "/states/mo.jpg"
+    },
+    {
+      "id": 27,
+      "state": "Montana",
+      "state_code": "mt",
+      "state_description": "Montana has a land area of 145,509.2 square miles and a water area of 1,493.4 square miles. It is the 4th largest state by area.",
+      "image": "/states/mt.jpg"
+    },
+    {
+      "id": 28,
+      "state": "Nebraska",
+      "state_code": "ne",
+      "state_description": "Nebraska has a land area of 76,796.2 square miles and a water area of 530.6 square miles. It is the 15th largest state by area.",
+      "image": "/states/ne.jpg"
+    },
+    {
+      "id": 29,
+      "state": "Nevada",
+      "state_code": "nv",
+      "state_description": "Nevada has a land area of 109,831.3 square miles and a water area of 710.1 square miles. It is the 7th largest state by area.",
+      "image": "/states/nv.jpg"
+    },
+    {
+      "id": 30,
+      "state": "New Hampshire",
+      "state_code": "nh",
+      "state_description": "New Hampshire has a land area of 8,951.0 square miles and a water area of 396.4 square miles. It is the 44th largest state by area.",
+      "image": "/states/nh.jpg"
+    },
+    {
+      "id": 31,
+      "state": "New Jersey",
+      "state_code": "nj",
+      "state_description": "New Jersey has a land area of 7,352.9 square miles and a water area of 1,367.9 square miles. It is the 46th largest state by area.",
+      "image": "/states/nj.jpg"
+    },
+    {
+      "id": 32,
+      "state": "New Mexico",
+      "state_code": "nm",
+      "state_description": "New Mexico has a land area of 121,280.1 square miles and a water area of 280.9 square miles. It is the 5th largest state by area.",
+      "image": "/states/nm.jpg"
+    },
+    {
+      "id": 33,
+      "state": "New York",
+      "state_code": "ny",
+      "state_description": "New York has a land area of 47,111.3 square miles and a water area of 7,429.0 square miles. It is the 30th largest state by area.",
+      "image": "/states/ny.jpg"
+    },
+    {
+      "id": 34,
+      "state": "North Carolina",
+      "state_code": "nc",
+      "state_description": "North Carolina has a land area of 48,607.4 square miles and a water area of 5,196.9 square miles. It is the 29th largest state by area.",
+      "image": "/states/nc.jpg"
+    },
+    {
+      "id": 35,
+      "state": "North Dakota",
+      "state_code": "nd",
+      "state_description": "North Dakota has a land area of 68,976.5 square miles and a water area of 1,702.8 square miles. It is the 17th largest state by area.",
+      "image": "/states/nd.jpg"
+    },
+    {
+      "id": 36,
+      "state": "Ohio",
+      "state_code": "oh",
+      "state_description": "Ohio has a land area of 40,847.9 square miles and a water area of 3,965.8 square miles. It is the 35th largest state by area.",
+      "image": "/states/oh.jpg"
+    },
+    {
+      "id": 37,
+      "state": "Oklahoma",
+      "state_code": "ok",
+      "state_description": "Oklahoma has a land area of 68,577.8 square miles and a water area of 1,302.7 square miles. It is the 19th largest state by area.",
+      "image": "/states/ok.jpg"
+    },
+    {
+      "id": 38,
+      "state": "Oregon",
+      "state_code": "or",
+      "state_description": "Oregon has a land area of 95,962.6 square miles and a water area of 2,390.0 square miles. It is the 10th largest state by area.",
+      "image": "/states/or.jpg"
+    },
+    {
+      "id": 39,
+      "state": "Pennsylvania",
+      "state_code": "pa",
+      "state_description": "Pennsylvania has a land area of 44,729.9 square miles and a water area of 1,311.8 square miles. It is the 32nd largest state by area.",
+      "image": "/states/pa.jpg"
+    },
+    {
+      "id": 40,
+      "state": "Rhode Island",
+      "state_code": "ri",
+      "state_description": "Rhode Island has a land area of 1,033.6 square miles and a water area of 510.9 square miles. It is the 50th largest state by area.",
+      "image": "/states/ri.jpg"
+    },
+    {
+      "id": 41,
+      "state": "South Carolina",
+      "state_code": "sc",
+      "state_description": "South Carolina has a land area of 30,055.8 square miles and a water area of 1,959.3 square miles. It is the 40th largest state by area.",
+      "image": "/states/sc.jpg"
+    },
+    {
+      "id": 42,
+      "state": "South Dakota",
+      "state_code": "sd",
+      "state_description": "South Dakota has a land area of 75,789.6 square miles and a water area of 1,306.0 square miles. It is the 16th largest state by area.",
+      "image": "/states/sd.jpg"
+    },
+    {
+      "id": 43,
+      "state": "Tennessee",
+      "state_code": "tn",
+      "state_description": "Tennessee has a land area of 41,227.1 square miles and a water area of 905.9 square miles. It is the 34th largest state by area.",
+      "image": "/states/tn.jpg"
+    },
+    {
+      "id": 44,
+      "state": "Texas",
+      "state_code": "tx",
+      "state_description": "Texas has a land area of 261,193.9 square miles and a water area of 7,330.9 square miles. It is the 2nd largest state by area.",
+      "image": "/states/tx.jpg"
+    },
+    {
+      "id": 45,
+      "state": "Utah",
+      "state_code": "ut",
+      "state_description": "Utah has a land area of 82,355.1 square miles and a water area of 2,520.5 square miles. It is the 12th largest state by area.",
+      "image": "/states/ut.jpg"
+    },
+    {
+      "id": 46,
+      "state": "Vermont",
+      "state_code": "vt",
+      "state_description": "Vermont has a land area of 9,215.4 square miles and a water area of 397.7 square miles. It is the 43rd largest state by area.",
+      "image": "/states/vt.jpg"
+    },
+    {
+      "id": 47,
+      "state": "Virginia",
+      "state_code": "va",
+      "state_description": "Virginia has a land area of 39,471.7 square miles and a water area of 3,291.8 square miles. It is the 37th largest state by area.",
+      "image": "/states/va.jpg"
+    },
+    {
+      "id": 48,
+      "state": "Washington",
+      "state_code": "wa",
+      "state_description": "Washington has a land area of 66,437.5 square miles and a water area of 4,844.2 square miles. It is the 20th largest state by area.",
+      "image": "/states/wa.jpg"
+    },
+    {
+      "id": 49,
+      "state": "West Virginia",
+      "state_code": "wv",
+      "state_description": "West Virginia has a land area of 24,034.8 square miles and a water area of 188.9 square miles. It is the 41st largest state by area.",
+      "image": "/states/wv.jpg"
+    },
+    {
+      "id": 50,
+      "state": "Wisconsin",
+      "state_code": "wi",
+      "state_description": "Wisconsin has a land area of 54,153.1 square miles and a water area of 11,326.9 square miles. It is the 25th largest state by area.",
+      "image": "/states/wi.jpg"
+    },
+    {
+      "id": 51,
+      "state": "Wyoming",
+      "state_code": "wy",
+      "state_description": "Wyoming has a land area of 97,063.0 square miles and a water area of 720.9 square miles. It is the 9th largest state by area.",
+      "image": "/states/wy.jpg"
+    }
+  ]

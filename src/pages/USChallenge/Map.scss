@@ -1,0 +1,15 @@
+@use "../styles/partials/global";
+
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
+@use "../styles/partials/typography" as *;
+
+
+.state__cards {
+   display: flex;
+   flex-wrap: wrap;
+    /* border: 1xp solid black;
+    width: 35%; */
+    justify-content: center;
+    
+}
