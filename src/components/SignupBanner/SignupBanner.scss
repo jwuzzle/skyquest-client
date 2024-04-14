@@ -7,31 +7,29 @@
 
 
 .signup-banner {
-    background-color: $black;
-    height: 50px;
+    border-top: 3px solid $black;
+    border-bottom: 3px solid $black;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-   /*  position: relative; */
-    margin-top: 250px;
+    align-items: center;
+    margin-top: 16px;
+    background-color: rgba(243, 243, 243, 0.8);
 
     &__item-container {
-        /* background-color: $white; */
         width: 50%;
-        /* top: 5%; */
-        /* border: 1px solid $white; */
         border-radius: 20px;
         display: flex;
         flex-direction: column;
-        /* position: absolute; */
         justify-content: center;
         align-items: center;
-        /* margin: 61px 0; */
         padding: 40px 50px;
     }
 
     &__header {
         color: $black;
-
+        width: max-content;
+        @include section-header-mobile;
     }
 
     &__button {
@@ -41,53 +39,24 @@
         border-radius: 4px;
         text-decoration: none;
         margin: 16px;
-        padding: 15px;
+        padding: 8px 16px;
+        @include labels-buttons-mobile;
     }
-    
+
 
 
     @media only screen and (min-width: $tablet-breakpoint) {
+        &__header {
+            @include page-header;
+        }
 
-        
+        &__button {
+            @include labels-buttons;
+        }
     }
 
-    @media only screen and (min-width: $desktop-breakpoint) {
-    /* background-color: $black;
-    margin-bottom: 36px;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    position: relative; */
+    @media only screen and (min-width: $desktop-breakpoint) {}
 
 
-    &__item-container {
-        background-color: $white;
-        width: 50%;
-        border: 1px solid $white;
-        border-radius: 20px;
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        justify-content: center;
-        align-items: center;
-        margin: 61px 0;
-        padding: 30px 100px;
-    }
 
-    &__header {
-        color: $black;
-
-
-    }
-
-    &__button {
-        color: $black;
-        background-color: $white;
-        border: 1px solid $black;
-        border-radius: 4px;
-        text-decoration: none;
-        margin: 16px;
-        padding: 15px;
-    }
-    }
 }

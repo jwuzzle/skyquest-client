@@ -13,7 +13,10 @@ const InfoBanner = (props) => {
               src={props.icon}
               alt={props.iconalt}
             />
-            <li className="info__firstsection--values period-line-breaks1"></li>
+            <div className="info__firstsection--values">
+            <li className="info__firstsection--values-header">Explore more, spend less.</li>
+            <li className="info__firstsection--values-copy">Our tools help you discover the world affordably, connecting you with unforgettable experiences.</li>
+            </div>
           </div>
           <div className="info__firstsection--copygroup">
             <img
@@ -21,23 +24,10 @@ const InfoBanner = (props) => {
               src={props.icon}
               alt={props.iconalt}
             />
-            <li className="info__firstsection--values period-line-breaks2"></li>
+             <div className="info__firstsection--values">
+            <li className="info__firstsection--values-header">Maximize your points.</li>
+            <li className="info__firstsection--values-copy">Find the best flight options for your credit card rewards, unlocking endless travel possibilities.</li>
           </div>
-          <div className="info__firstsection--copygroup">
-            <img
-              className="info__firstsection--icon"
-              src={props.icon}
-              alt={props.iconalt}
-            />
-            <li className="info__firstsection--values period-line-breaks3"></li>
-          </div>
-          <div className="info__firstsection--copygroup">
-            <img
-              className="info__firstsection--icon"
-              src={props.icon}
-              alt={props.iconalt}
-            />
-            <li className="info__firstsection--values period-line-breaks4"></li>
           </div>
         </ul>
       </div>
