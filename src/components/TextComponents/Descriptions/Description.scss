@@ -7,8 +7,8 @@
 
 .description {
     display: flex;
-    padding: 24px 16px 16px 16px;
-    margin-top: 60px;
+    padding: 0px 16px 16px 16px;
+    margin-top: 24px;
 
     &__copy {
         @include body-copy-mobile;

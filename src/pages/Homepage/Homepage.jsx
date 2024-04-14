@@ -10,8 +10,13 @@ import { jwtDecode } from "jwt-decode";
 const Homepage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const token = sessionStorage.getItem("JWTtoken");
-  const decoded = jwtDecode(token);
-  console.log(decoded)
+  let decoded = null;
+if (token) {
+  decoded = jwtDecode(token);
+  console.log(decoded);
+}
+ /*  const decoded = jwtDecode(token); */
+ 
 
   useEffect(() => {
     if (!token) {
