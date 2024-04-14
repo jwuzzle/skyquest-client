@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import USChallenge from "./pages/MapPage"
+import ContinentsChallenge from "./pages/Continents/Continents"
 import FlightListPage from "./pages/FlightList/FlightList";
 import LandingPage from "../src/pages/LandingPage/LandingPage";
 import Homepage from "../src/pages/Homepage/Homepage";
@@ -20,6 +21,7 @@ function App() {
           <Route path="/home" element={<Homepage />} />
           <Route path="/flights" element={<FlightListPage />} />
           <Route path="/us-states-challenge" element={<USChallenge />} />
+          <Route path="/continents-challenge" element={<ContinentsChallenge />} />
         </Routes>
       </BrowserRouter>
     </>

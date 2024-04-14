@@ -14,8 +14,8 @@ const StateCounterCard = (props) => {
     setStatecode(props.state_code)
   };
  
-/*   console.log(statecode)
-  console.log(isClicked) */
+  console.log(statecode)
+  console.log(isClicked)
 
   return (
       <section className="card">
