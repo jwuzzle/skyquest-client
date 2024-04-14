@@ -4,6 +4,59 @@
 @use "../styles/partials/mixins" as *;
 @use "../styles/partials/typography" as *;
 
+
+.landingpage {
+    display: flex;
+    flex-direction: column;
+
+    &__top-destinations {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media only screen and (min-width: $tablet-breakpoint) {}
+
+    @media only screen and (min-width: $desktop-breakpoint) {
+
+        display: flex;
+        flex-direction: column;
+
+
+
+        &__top-destinations {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
 .text {
     position: relative;
+}
+
+
+
+.top-destinations {
+    padding: 24px 16px 16px 16px;
+
+    &__header {
+        @include section-header-mobile;
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+
+    @media only screen and (min-width: $tablet-breakpoint) {}
+
+    @media only screen and (min-width: $desktop-breakpoint) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+    }
 }
