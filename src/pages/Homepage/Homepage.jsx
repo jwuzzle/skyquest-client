@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Challenges from "../../components/ChallengesBanner/ChallengesBanner";
-import Card from "../../components/Homepage/Card/Card";
-import globe from "../../assets/images/globe.jpg";
+import Challenges from "../../components/Homepage/ChallengesBanner/ChallengesBanner";
+import Card from "../../components/Homepage/Card/FlightCard";
+import flightChallenge from "../../assets/images/home_challenges.jpg"
 import AuthenticatedHeader from "../../components/Header/AuthenticatedHeader";
 import "./Homepage.scss";
 import { jwtDecode } from "jwt-decode";
+import planeTicket from "../../assets/images/plane_ticket.jpg"
+import SliderCards from "../../components/Slider/SliderCards";
 
 const Homepage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -38,8 +40,10 @@ if (token) {
               <div className="home__features--flights">
                 <Card
                   header="Your Miles, Your Way."
-                  subheader="Search Flights Across Airlines! Journey with Your Miles!"
+                  subheader="Search Flights Across Airlines!" 
+                  subheader_two="Journey with Your Miles!"
                   button="Find flights"
+                  image={planeTicket}
                 />
               </div>
             </section>
@@ -51,24 +55,11 @@ if (token) {
                   description="Conquer the 50 States! Explore all U.S. states and D.C. for rewards."
                   url="/us-states-challenge"
                   buttonlabel="Let's Go!"
-                  image={globe}
-                />
-                <Challenges
-                  title="Wonders Expedition"
-                  description="Conquer the 7 Wonders! Visit, track, and unlock rewards."
-                  url="/7-wonders-challenge"
-                  buttonlabel="Explore Wonders"
-                  image={globe}
-                />
-                <Challenges
-                  title="Continents Adventure"
-                  description="Visit Every Continent, Unlock Rewards! (bonus points for Antarctica)"
-                  url="/continents-challenge"
-                  buttonlabel="Start Exploring"
-                  image={globe}
+                  image={flightChallenge}
                 />
               </div>
             </section>
+              <SliderCards />
           </section>
         )}
       </div>

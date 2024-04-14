@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import ChallengeBanner from "../../components/ChallengesBanner/ChallengesBanner";
+/* import ChallengeBanner from "../../components/ChallengesBanner/ChallengesBanner"; */
 import AuthenticatedHeader from "../../components/Header/AuthenticatedHeader";
 import { jwtDecode } from "jwt-decode";
 import contientData from "../../data/continents.json";

@@ -9,7 +9,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 24px;
+    padding-top: 16px;
 
     &__card {
         display: flex;
@@ -27,7 +27,7 @@
     &__image-container {}
 
     &__image {
-        position: absolute;
+        /* position: absolute; */
         object-fit: cover;
         height: 100%;
         top: 0;
