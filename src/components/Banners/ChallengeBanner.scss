@@ -8,9 +8,9 @@
 
     &__image {
         width: 100%;
-        object-fit: cover;
-        top: 0;
-        left: 0;
+        height: 320px;
+      /*   top: 0;
+        left: 0; */
         z-index: -1;
     }
 
@@ -18,11 +18,13 @@
         @include page-header-mobile;
         position: absolute;
         left: 50%;
-        top: 39%;
+        top: 35%;
         transform: translate(-50%, -50%);
         z-index: 1;
-        color: rgba(255, 255, 255, 0.8);
+        color: rgba(255, 255, 255, 1);
         text-align: center;
+        width: 80%
+
     }
 
     @media only screen and (min-width: $tablet-breakpoint) {
@@ -66,10 +68,10 @@
     content: "";
     display: block;
     position: absolute;
-    top: 16%;
+    top: 13%;
     bottom: 0;
     width: 100%;
-    height: 50vh;
+    height: 44vh;
     background-color: rgba(0, 0, 0, 0.3);
 
     @media only screen and (min-width: $tablet-breakpoint) {
