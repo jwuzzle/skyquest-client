@@ -4,9 +4,9 @@
 @use "../styles/partials/mixins" as *;
 @use "../styles/partials/typography" as *;
 
-.info {
+.infotwo {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     padding: 0 16px;
 
     &__firstsection {
@@ -45,9 +45,23 @@
         }
 
         &--values {
+            display: flex;
+            flex-direction: column;
             margin-bottom: 16px;
             list-style-type: none;
         }
+
+        &--values-header {
+            @include body-copy-mobile;
+            list-style-type: none;
+        }
+
+        &--values-copy {
+            @include body-copy-mobile;
+            margin-bottom: 16px;
+            list-style-type: none;
+        }
+
     }
 
     &__secondsection {
@@ -64,43 +78,61 @@
 
     @media only screen and (min-width: $tablet-breakpoint) {
         flex-direction: row;
-        margin-top: 24px;
+        margin: 24px 0;
         padding: 0 36px;
 
         &__firstsection {
             display: flex;
             flex-direction: column;
-            padding: 24px 0 0 0;
+            padding: 24px 0 0 36px;
             justify-content: center;
 
             &--header {
                 @include section-header;
             }
-    
+
             &--subheader {
                 @include subheader;
             }
-    
+
             &--copy {
                 @include body-copy;
                 display: flex;
                 flex-direction: column;
                 color: $charcoalgrey;
-                width: 85%;
+                width: auto;
                 padding-left: 0;
             }
-    
+
             &--copygroup {
                 display: flex;
             }
-    
+
             &--icon {
                 width: 12px;
                 height: 12px;
                 margin: 6px 10px 0 0;
             }
-    
+
             &--values {
+                margin-bottom: 16px;
+                list-style-type: none;
+            }
+
+            &--values {
+                display: flex;
+                margin-bottom: 16px;
+                list-style-type: none;
+            }
+
+            &--values-header {
+                @include body-copy-mobile;
+                margin-bottom: 16px;
+                list-style-type: none;
+            }
+
+            &--values-copy {
+                @include body-copy-mobile;
                 margin-bottom: 16px;
                 list-style-type: none;
             }
@@ -110,7 +142,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-    
+
             &--image {
                 box-sizing: border-box;
                 width: 300px;
@@ -122,7 +154,7 @@
 
     @media only screen and (min-width: $desktop-breakpoint) {
         display: flex;
-        padding: 0;
+        margin: 0 0 24px 0;
 
         &__firstsection {
             display: flex;
@@ -164,6 +196,10 @@
                 line-height: 24px;
                 list-style-type: none;
             }
+
+            &--values-header {
+                margin-bottom: 0;
+            }
         }
 
         &__secondsection {
@@ -174,8 +210,8 @@
 
             &--image {
                 width: 100%;
-                max-width: 100%;
-                padding: 0 132px 0 36px;
+                height: 80%;
+                padding: 0 36px 0 60px;
                 box-sizing: border-box;
 
             }

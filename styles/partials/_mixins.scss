@@ -51,6 +51,12 @@
 
 //desktop & tablet font styles
 
+@mixin video-overlay {
+    font-size: 3.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+}
+
 @mixin page-header {
     font-size: 2.0625rem;
     line-height: 2.75rem;
@@ -58,13 +64,13 @@
 }
 
 @mixin section-header {
-    font-size: 0.75rem;
+    font-size: 1.25rem;
     line-height: 1.25rem;
     font-weight: 700;
 }
 
 @mixin subheader {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     line-height: 1.375rem;
     font-weight: 700;
 }

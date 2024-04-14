@@ -48,23 +48,23 @@ const SliderCards = () => {
     <section>
       <h1 className="carousel-header">Top 2024 Destinations</h1>
     <div className="carousel">
+      <div className="carousel__group">
       {destinationData
         .slice(startIndex, startIndex + itemsPerPage)
         .map((travel, index) => (
           <div className="carousel__card" key={index}>
-            {/* <div className="carousel__image--container"> */}
               <img
                 className="carousel__image"
                 src={travel.image}
                 alt={travel.location}
               />
-            {/* </div> */}
             <div className="carousel__content">
             <h2 className="carousel__header">{travel.location}</h2>
             <div className="carousel__description">{travel.description}</div>
           </div>
           </div>
         ))}
+        </div>
       <div className="carousel__flex">
         {destinationData.map((travel, index) => (
           <h1 className="carousel__buttons" key={index} onClick={() => handleClick(index)}>
@@ -76,24 +76,5 @@ const SliderCards = () => {
     </section>
   );
 };
-
-/*  <section className="top-destinations carousel">
-    <h1 className="top-destinations__header">Top Destinations</h1>
-    <div className="top-destinations__carousel-wrapper">
-      <div className="top-destinations__cards">
-        {data.map((travel) => (
-      
-            <DestinationCard
-              key={travel.id}
-              title={travel.location}
-              description={travel.description}
-            />
-        ))}
-      </div>
-
-      </div>
-  </section>
-);
-}; */
 
 export default SliderCards;
