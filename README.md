@@ -43,6 +43,7 @@ List the functionality that your app will include. These can be written as user 
 ### APIs
 
 - seats.aero API for flights by miles/points
+- local APIs to databases on the server side
 
 
 ### Sitemap
@@ -69,7 +70,7 @@ Data from the API:
 - Data in the challenges will need to be saved for the user
 
 JSON Files
-- Will hold data for state information, airline information 
+- Will hold data for state information, airline information. Located on both the client and server side.
 
 ### Endpoints
 
@@ -77,7 +78,7 @@ JSON Files
 
 ### Auth
 
-- TBD on client side or server side authentication 
+- Server and client side authentication 
 
 
 ## Roadmap
