@@ -54,7 +54,6 @@ List the pages of your app with brief descriptions. You can show this visually, 
 - Sign up: page/process for the users to create an account/profile
 - User homepage: page with all the features available to the users
 - Flight search: page for the user to search flights by origin airport and destination region by points 
-- Airline partners by credit cards: page with information on airline partners by credit card
 
 ### Mockups
 
@@ -91,4 +90,5 @@ Your project will be marked based on what you committed to in the above document
 
 - Challenges: page that outlines fun travel challenges, such as "visit all states in the US", where users can track which states they've visited
 - Addition filtering of the flight results
-- Photo gallery where users can upload photos based on location / destination (social media type feed) 
+- Photo gallery where users can upload photos based on location / destination (social media type feed)
+- Airline partners by credit cards: page with information on airline partners by credit card
