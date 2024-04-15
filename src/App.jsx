@@ -11,6 +11,8 @@ import USAChallengesHome from "../src/pages/USChallenge/USAChallengeHome/USAChal
 import USAMidAtlantic from "../src/pages/USChallenge/USAMidAtlantic/USAMidAtlantic"
 import USANewEngland from "./pages/USChallenge/USANewEngland/USANewEngland";
 import USASouthAtlantic from "./pages/USChallenge/USASouthAtlantic/USASouthAtlantic";
+import USASouthEastCentral from "./pages/USChallenge/USASouthEastCentral/USASouthEastCentral"
+import USAPacificWest from "./pages/USChallenge/USAPacificWest/USAPacificWest"
 import TheAmazingRace from "./pages/Challenges/AmazingRace/AmazingRace"
 import "../styles/partials/_typography.scss";
 import "./App.scss";
@@ -21,7 +23,6 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LandingPage />} />
-         {/*  <Route path="/signup" element={<Authenication />} /> */}
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Homepage />} />
@@ -32,12 +33,13 @@ function App() {
           <Route path="/challenges/us-states-challenge/northeast-mid-atlantic" element={<USAMidAtlantic />} />
           <Route path="/challenges/us-states-challenge/northeast-new-england" element={<USANewEngland />} />
           <Route path="/challenges/us-states-challenge/south-atlantic" element={<USASouthAtlantic />} />
-          <Route path="/challenges/us-states-challenge/south-west-central" element={<USChallenge />} />
-          <Route path="/challenges/us-states-challenge/south-east-central" element={<USChallenge />} />
+          <Route path="/challenges/us-states-challenge/south-east-central" element={<USASouthEastCentral />} />
+          <Route path="/challenges/us-states-challenge/west-pacific" element={<USAPacificWest />} />
+          {/* <Route path="/challenges/us-states-challenge/south-west-central" element={<USChallenge />} />
           <Route path="/challenges/us-states-challenge/midwest-west" element={<USChallenge />} />
           <Route path="/challenges/us-states-challenge/midwest-east" element={<USChallenge />} />
-          <Route path="/challenges/us-states-challenge/west-pacific" element={<USChallenge />} />
-          <Route path="/challenges/us-states-challenge/west-mountain" element={<USChallenge />} />
+          <Route path="/challenges/us-states-challenge/west-pacific" element={<USAPacificWest />} />
+          <Route path="/challenges/us-states-challenge/west-mountain" element={<USChallenge />} /> */}
           <Route path="/challenges/the-amazing-race" element={<TheAmazingRace />} />
         </Routes>
       </BrowserRouter>
