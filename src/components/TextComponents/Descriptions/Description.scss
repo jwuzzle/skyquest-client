@@ -1,0 +1,34 @@
+@use "../styles/partials/global";
+
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
+@use "../styles/partials/typography" as *;
+
+
+.description {
+    display: flex;
+    padding: 0px 16px 16px 16px;
+    margin-top: 24px;
+
+    &__copy {
+        @include body-copy-mobile;
+    }
+
+    @media only screen and (min-width: $tablet-breakpoint) {
+        padding: 18px 36px 24px 36px;
+        margin-top: 24px;
+        &__copy {
+            @include body-copy;
+        }
+    }
+
+    @media only screen and (min-width: $desktop-breakpoint) {
+        padding: 18px 96px 24px 96px;
+        margin-top: 24px;
+        &__copy {
+            font-weight: 600;
+        }
+    
+    }
+
+}

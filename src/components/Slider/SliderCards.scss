@@ -1,0 +1,151 @@
+@use "../styles/partials/global";
+
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
+@use "../styles/partials/typography" as *;
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 16px;
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        width: 13rem;
+        height: 16.5rem;
+        border-radius: 10px;
+        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+        color: $white;
+        box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    &__image-container {}
+
+    &__image {
+        /* position: absolute; */
+        object-fit: cover;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0.9;
+        transition: opacity .2s ease-out;
+    }
+
+    &__header {
+        @include subheader-mobile;
+        position: absolute;
+        inset: auto auto 10px 15px;
+        margin: 0;
+        transition: inset .3s .3s ease-out;
+        text-transform: uppercase;
+    }
+
+    &:hover {
+        h2 {
+            inset: auto auto 200px 15px;
+            transition: inset .3s ease-out;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            opacity: 1;
+            transition: opacity .5s .1s ease-in;
+        }
+    }
+
+    &__description {
+        @include body-copy-mobile;
+        position: absolute;
+        opacity: 0;
+        max-width: 80%;
+        transition: opacity .3s ease-out;
+        inset: auto auto 40px 15px;
+        line-height: none;
+        background-color: rgba(0, 0, 0, 0.3);
+
+    }
+
+    &__flex {
+        display: flex;
+        margin: 0 0 16px 0;
+        font-size: 30px;
+    }
+
+    &__buttons {
+        cursor: pointer;
+        margin-right: 3px;
+    }
+
+    @media only screen and (min-width: $tablet-breakpoint) {
+        padding-top: 36px;
+
+        &__header {
+            @include subheader;
+            position: absolute;
+            inset: auto auto 10px 15px;
+            margin: 0;
+            transition: inset .3s .3s ease-out;
+            text-transform: uppercase;
+        }
+
+        &__group {
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__card {
+            flex-direction: row;
+            width: 19rem;
+            height: 25rem;
+            margin: 0 12px;
+            justify-content: center;
+        }
+
+        &__flex {
+            display: flex;
+            margin: 16px 0 24px 0;
+        }
+    }
+
+    @media only screen and (min-width: $desktop-breakpoint) {
+
+        &__card {
+            margin: 0 20px;
+        }
+    }
+
+}
+
+.carousel__description:hover {
+    opacity: 1;
+    transition: opacity .5s .1s ease-in;
+}
+
+img:hover {
+    transition: opacity .3s ease-in;
+    opacity: 1;
+}
+
+
+.carousel-header {
+    @include section-header-mobile;
+    padding: 16px;
+    margin: 0 16px;
+    border-top: 1px solid black;
+
+    @media only screen and (min-width: $tablet-breakpoint) {
+        @include section-header;
+        padding: 36px 16px 36px 16px;
+    }
+
+    @media only screen and (min-width: $tablet-breakpoint) {
+        margin: 0 96px;
+        padding: 36px 16px 36px 0;
+
+    }
+}

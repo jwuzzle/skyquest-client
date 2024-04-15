@@ -1,0 +1,147 @@
+@use "../styles/partials/global";
+
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
+@use "../styles/partials/typography" as *;
+
+.table__header {
+    @include section-header-mobile;
+    @media only screen and (min-width: $tablet-breakpoint) {
+        @include section-header;
+        border-top: none;
+        margin-left: 36px;
+    }
+    @media only screen and (min-width: $desktop-breakpoint) {
+        margin-left: 96px;
+    }
+
+}
+
+.table-labels  {
+    display: none;
+
+    @media only screen and (min-width: $tablet-breakpoint) {
+    display: flex;
+    border-bottom: 1px solid black;
+    margin: 36px 36px 0 36px;
+    justify-content: space-around;
+
+    &__date {
+        @include body-copy;
+        display: flex;
+        align-items: center;
+        width: 100px;
+        font-weight: 600;
+    }
+    &__origin {
+        @include body-copy;
+        display: flex;
+        align-items: center;
+        width: 100px;
+        font-weight: 600;
+    }
+    &__destination {
+        @include body-copy;
+        line-height: 1rem;
+        align-items: center;
+        display: flex;
+        width: 100px;
+        font-weight: 600;
+    }
+    
+    &__economy {
+        @include body-copy;
+        text-align: center;
+        width: 100px;
+        border-radius: 15px;
+        color: green;
+        text-transform:uppercase;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__premium {
+        @include body-copy;
+        text-align: center;
+        width: 100px;
+        border-radius: 15px;
+        color: orange;
+        text-transform:uppercase;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__business {
+        @include body-copy;
+        text-align: center;
+        width: 100px;
+        border-radius: 15px;
+        color: blue;
+        text-transform:uppercase;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__first {
+        @include body-copy;
+        text-align: center;
+        width: 100px;
+        border-radius: 15px;
+        color: purple;
+        text-transform:uppercase;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media only screen and (min-width: $desktop-breakpoint) {
+    justify-content: space-between;
+    margin: 36px 96px 0 96px;
+
+    &__date {
+        width: 150px;
+    }
+
+    &__origin {
+        width: 150px;
+
+    }
+
+    &__destination {
+        width: 150px;
+
+    }
+
+    &__economy {
+        width: 150px;
+      
+    }
+    &__premium {
+        width: 150px;
+       
+    }
+
+    &__business {
+        width: 150px;
+
+    }
+
+    &__first {
+        width: 150px;
+
+    }
+
+}
+
+}
+
+.hidden {
+    display: none;
+}

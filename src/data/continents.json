@@ -1,0 +1,44 @@
+[
+    {
+      "id": 1,
+      "continent": "North America",
+      "description": "North America is the third-largest continent by area and fourth-largest by population. It is home to diverse landscapes, including vast forests, deserts, and mountain ranges.",
+      "examples": "United States, Canada, Mexico, Cuba, Jamaica.",
+      "image": "/continents/north_america.jpg"
+  },
+    {
+      "id": 2,
+      "continent": "South America",
+      "description": "South America is the fourth-largest continent, located mostly in the southern hemisphere. It is known for its rich biodiversity, including the Amazon Rainforest, and diverse cultures.",
+      "examples": "Brazil, Argentina, Colombia, Peru, Chile.",
+      "image": "/continents/south_america.jpg"
+  },
+    {
+      "id": 3,
+      "continent": "Europe",
+      "description": "Europe is the second-smallest continent by area but densely populated. It is known for its rich history, diverse cultures, and architectural landmarks.",
+      "examples": "France, Germany, United Kingdom, Italy, Spain.",
+      "image": "/continents/europe.jpg"
+  },
+    {
+      "id": 4,
+      "continent": "Asia",
+      "description": "Asia is the largest continent both by area and population, spanning diverse landscapes from deserts to tropical rainforests. It is known for its ancient civilizations and cultural diversity.",
+      "examples": "China, India, Japan, Russia, Saudi Arabia.",
+      "image": "/continents/asia.jpg" 
+  },
+    {
+      "id": 5,
+      "continent": "Africa",
+      "description": "Africa is the second-largest continent by area and population, known for its vast savannas, deserts, and diverse wildlife. It has a rich cultural heritage and history.",
+      "examples": "Nigeria, Ethiopia, Egypt, South Africa, Kenya.",
+      "image": "/continents/africa.jpg"
+    },
+    {
+      "id": 6,
+      "continent": "Australia",
+      "description": "Australia is the smallest continent and a country itself, located in the Southern Hemisphere. It is known for its unique wildlife and natural landmarks.",
+      "examples": "Australia, New Zealand, Papua New Guinea, Fiji, Indonesia.",
+      "image": "/continents/australia.jpg" 
+    }
+]

@@ -1,0 +1,124 @@
+@use "../styles/partials/global";
+
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
+@use "../styles/partials/typography" as *;
+
+
+.home-challenge {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $black;
+  border-radius: 5px;
+  width: 70%;
+  height: 25vh;
+  justify-content: space-around;
+  padding: 16px;
+  box-shadow: 0 10px 30px 5px rgba(115, 61, 61, 0.2);
+  margin-bottom: 16px;
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  &__image {
+    width: 40px;
+    height: 50px;
+  }
+
+  &__title {
+    @include section-header-mobile;
+  }
+
+  &__details-bottom {
+    display: flex;
+    align-items: center;
+  }
+
+  &__description {
+    @include body-copy-mobile;
+  }
+
+  &__button {
+    @include labels-buttons-mobile;
+    color: $black;
+    background-color: $white;
+    border: 1px solid $black;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 3px 5px;
+    width: fit-content;
+    height: 40px;
+  }
+
+  @media only screen and (min-width: $tablet-breakpoint) {
+    width: 40%;
+
+    &__image {
+      width: 80px;
+      height: 80px;
+      margin-left: 24px;
+    }
+
+    &__title {
+      @include section-header;
+      margin-right: 6px;
+    }
+
+    &__details-bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__description {
+      @include body-copy;
+    }
+
+    &__button {
+      @include labels-buttons;
+      width: fit-content;
+      height: unset;
+      margin-top: 16px;
+    }
+
+  }
+
+  @media only screen and (min-width: $desktop-breakpoint) {
+    width: 20%;
+
+    &__image {
+      width: 80px;
+      height: 80px;
+      margin-left: 24px;
+      margin-right: 16px;
+    }
+
+    &__title {
+      @include section-header;
+      margin-right: 6px;
+    }
+
+    &__details-bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__description {
+      @include body-copy;
+    }
+
+    &__button {
+      @include labels-buttons;
+      width: fit-content;
+      height: unset;
+      margin-top: 16px;
+    }
+
+  }
+
+}

@@ -1,0 +1,17 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+@use "./typography" as *;
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', 'sans‑serif';
+}
+
+button:hover {
+    /* background-color: $secondary-color--darkblue; */
+}
+
+.noHover {
+    pointer-events: none;
+}

@@ -1,0 +1,62 @@
+@use "../styles/partials/global";
+
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
+@use "../styles/partials/typography" as *;
+
+
+
+.signup-banner {
+    border-top: 3px solid $black;
+    border-bottom: 3px solid $black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    background-color: rgba(243, 243, 243, 0.8);
+
+    &__item-container {
+        width: 50%;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 50px;
+    }
+
+    &__header {
+        color: $black;
+        width: max-content;
+        @include section-header-mobile;
+    }
+
+    &__button {
+        color: $black;
+        background-color: $white;
+        border: 1px solid $black;
+        border-radius: 4px;
+        text-decoration: none;
+        margin: 16px;
+        padding: 8px 16px;
+        @include labels-buttons-mobile;
+    }
+
+
+
+    @media only screen and (min-width: $tablet-breakpoint) {
+        &__header {
+            @include page-header;
+        }
+
+        &__button {
+            @include labels-buttons;
+        }
+    }
+
+    @media only screen and (min-width: $desktop-breakpoint) {}
+
+
+
+}

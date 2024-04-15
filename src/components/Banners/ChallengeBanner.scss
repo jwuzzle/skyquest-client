@@ -1,0 +1,97 @@
+@use "../styles/partials/global";
+
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
+@use "../styles/partials/typography" as *;
+
+.challenge-banner {
+
+    &__image {
+        width: 100%;
+        height: 320px;
+        z-index: -1;
+    }
+
+    &__button {
+        @include labels-buttons-mobile;
+        position: absolute;
+        top: 15%;
+        left: 5%;
+        z-index: 1;
+        text-decoration: none;
+        color: $white;
+        cursor: pointer;
+        font-weight: normal;
+    }
+
+    &__header {
+        @include page-header-mobile;
+        position: absolute;
+        left: 50%;
+        top: 35%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        color: rgba(255, 255, 255, 1);
+        text-align: center;
+        width: 80%
+    }
+
+    @media only screen and (min-width: $tablet-breakpoint) {
+        background-color: #5C75B8;
+        height: 50vh;
+
+        &__image {
+            object-fit: contain;
+        }
+
+        &__button {
+            @include labels-buttons;
+            top: 10%;
+            left: 5%;
+            font-weight: normal;
+        }
+
+        &__header {
+            @include page-header;
+            top: 33%;
+            width: 100%;
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+
+    @media only screen and (min-width: $desktop-breakpoint) {
+        &__image {
+            height: 390px;
+        }
+
+        &__header {
+            top: 30%;
+        }
+
+        &__button {
+            left: 6.1%;
+        }
+    }
+}
+
+
+.challenge-banner::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 13%;
+    bottom: 0;
+    width: 100%;
+    height: 44vh;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    @media only screen and (min-width: $tablet-breakpoint) {
+        top: 6.8%;
+        height: 50vh;
+    }
+
+    @media only screen and (min-width: $desktop-breakpoint) {
+        top: 6%;
+        height: 408px;
+    }
+}

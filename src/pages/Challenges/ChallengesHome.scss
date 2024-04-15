@@ -1,0 +1,197 @@
+@use "../styles/partials/global";
+
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
+@use "../styles/partials/typography" as *;
+
+.challengeshome {
+    display: flex;
+    flex-direction: column;
+
+    &__hero-banner {
+        display: flex;
+    }
+
+    &__hero-image {
+        width: 100%;
+        height: 320px;
+        z-index: -1;
+    }
+
+    &__hero-text {
+        @include page-header-mobile;
+        position: absolute;
+        left: 50%;
+        top: 35%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        color: rgba(255, 255, 255, 1);
+        text-align: center;
+        width: 80%;
+    }
+
+    //end hero banner
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        margin: 24px 16px 16px 16px;
+        align-items: center;
+
+        &--content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid $black;
+            border-radius: 5px;
+            width: 80%;
+            height: 350px;
+            padding: 16px;
+            box-shadow: 0 10px 30px 5px rgba(115, 61, 61, 0.2);
+            margin-bottom: 16px;
+        }
+    }
+
+    &__image-container {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        border-radius: 5px;
+    }
+
+    &__image {
+        width: 90px;
+        height: 100px;
+    }
+
+    &__name {
+        @include section-header-mobile;
+        margin-top: 24px;
+    }
+
+    &__description {
+        @include body-copy-mobile;
+        margin-top: 16px;
+    }
+
+    &__button {
+        @include labels-buttons-mobile;
+        color: $black;
+        background-color: $white;
+        border: 1px solid $black;
+        border-radius: 4px;
+        text-decoration: none;
+        padding: 3px 5px;
+        width: 50%;
+        height: 20px;
+        margin-top: 16px;
+        text-align: center;
+    }
+
+    @media only screen and (min-width: $tablet-breakpoint) {
+        &__hero-banner {
+            justify-content: flex-start;
+            background-color: #214566;
+        }
+
+        &__hero-image {
+            width: fit-content;
+            height: 200px;
+            z-index: unset;
+            padding-left: 100px;
+        }
+
+        &__hero-text {
+            top: 20%;
+            left: 60%;
+            @include page-header;
+        }
+
+        &__cards {
+            margin: 24px 16px 16px 16px;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+            &--content {
+                width: 35%;
+                height: 400px;
+                justify-content: space-around;
+                margin-bottom: 36px;
+            }
+        }
+
+        &__name {
+            @include subheader;
+        }
+
+        &__description {
+            @include body-copy;
+        }
+
+        &__button {
+            @include labels-buttons;
+        }
+    }
+
+    @media only screen and (min-width: $desktop-breakpoint) {
+
+        &__hero-image {
+            height: 320px;
+            padding-left: 200px;
+        }
+
+        &__hero-text {
+            top: 20%;
+            left: 45%;
+            @include page-header;
+        }
+
+        &__cards {
+            justify-content: center;
+
+            &--content {
+                width: 20%;
+                margin: 0 36px;
+                height: 480px;
+                margin-bottom: 36px;
+            }
+        }
+
+        &__image {
+            width: 175px;
+            height: 200px;
+        }
+    }
+}
+
+.challengeshome__hero-banner::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 13%;
+    bottom: 0;
+    width: 100%;
+    height: 44vh;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    @media only screen and (min-width: $tablet-breakpoint) {
+        top: 6.9%;
+        height: 200px;
+        z-index: 1;
+    }
+
+    @media only screen and (min-width: $desktop-breakpoint) {
+        top: 6%;
+        height: 320px;
+    }
+}
+
+
+.yellow {
+    background-color: #FDC42D;
+}
+
+.blue {
+    background-color: #CCE9FA;
+}
