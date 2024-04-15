@@ -17,7 +17,7 @@ const ChallengesHome = () => {
           src={usMapImage}
           alt="location with phone and map"
         />
-        <Link className="challenge__button" to="/challenges">
+        <Link className="challenges__button" to="/challenges">
           Back
         </Link>
         <h3 className="challenges__hero-text">

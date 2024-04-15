@@ -90,6 +90,10 @@
 
         &__container {
 
+            &--image {
+                height: unset;
+            }
+
             &--header1 {
                 @include page-header;
                 top: 15%;

@@ -5,20 +5,19 @@
 @use "../styles/partials/typography" as *;
 
 
-.state-cards {
-   display: flex;
-    justify-content: center;
-    flex-direction: column;
-    
-
+.signout__button {
+    @include labels-buttons-mobile;
+    border: none;
+    color: rgba(66, 133, 244, 0.8);
+    background-color: $white;
 
     @media only screen and (min-width: $tablet-breakpoint) {
-        padding: 18px 24px 24px 24px;
-        flex-wrap: wrap;
-        flex-direction: row;
+        @include labels-buttons;
+        margin: 0 0 36px 36px;
     }
 
     @media only screen and (min-width: $desktop-breakpoint) {
-       
+        margin: 0 0 36px 85px;
     }
 }
+

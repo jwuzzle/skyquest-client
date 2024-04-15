@@ -134,6 +134,7 @@ const USAMidAtlantic = () => {
         image={usMapImage}
         text="Map of the usa with key landmarks on top of the map."
         header="The Northeast Mid-Atlantic"
+        url="/challenges/us-states-challenge/"
       />
       <Description description="Embark on a thrilling expedition through the vibrant Northeast Mid-Atlantic region, including New York, New Jersey, and Pennsylvania. Explore iconic cities, historic landmarks, and scenic wonders while earning rewards with each state you conquer. Join the adventure and discover the diverse charm of the Northeast Mid-Atlantic in this exhilarating challenge!" />
       <div className="state-cards">

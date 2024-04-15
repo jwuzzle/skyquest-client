@@ -1,7 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import UnauthenticatedHeader from "../../components/Header/UnauthenticatedHeader"
+import skyquestBlackLogo from "../../assets/logos/skyquest-black.svg"
+import './Signup.scss'
 
 const baseURL = "http://localhost:8080";
 const signupURL = `${baseURL}/users`;
@@ -40,31 +42,44 @@ const Signup = () => {
     return (
       <>
       <UnauthenticatedHeader />
-        <div>
-          <h1>Create an account</h1>
-          <form className="form__container--signup" onSubmit={handleSignup}>
-            <div className="form__input">
-              Username: <input type="text" name="username" />
+        <div className="signup">
+        <img className="signup__logo" src={skyquestBlackLogo} alt="skyquest logo" />
+          <h1 className="signup__header">Create an account</h1>
+          <form className="signup__container--signup" onSubmit={handleSignup}>
+            <div className="signup__input">
+            <label className="signup__label">Username</label>
+              <input type="text" name="username" />
             </div>
-            <div className="form__input">
-              First Name: <input type="text" name="first_name" />
+            <div className="signup__input">
+            <label className="signup__label">First Name</label>
+            <input type="text" name="first_name" />
             </div>
-            <div className="form__input">
-              Last Name: <input type="text" name="last_name" />
+            <div className="signup__input">
+            <label className="signup__label">Last Name</label>
+             <input type="text" name="last_name" />
             </div>
-            <div className="form__input">
-              Email: <input type="email" name="email" />
+            <div className="signup__input">
+            <label className="signup__label">Email</label>
+           <input type="email" name="email" />
             </div>
-            <div className="form__input">
-              Password: <input type="password" name="password_hash" />
+            <div className="signup__input">
+            <label className="signup__label">Password</label>
+          <input type="password" name="password_hash" />
             </div>
-            <button type="submit" className="form__button">
-              Register
+            <div className="login__buttons">
+            <button type="submit" className="signup__button">
+              Sign up
             </button>
-            <button type="cancel" className="form__cancel">
-              X
+            <button type="cancel" className="signup__cancel">
+              Cancel
             </button>
+            </div>
           </form>
+          <div className="signup__login">
+            <p className="signup__login--now">Have an account?</p>
+            <Link to={"/login"} className="signup__login--link">
+              <p>Log in</p></Link>
+          </div>
         </div>
       </>
     );

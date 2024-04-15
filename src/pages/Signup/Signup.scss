@@ -1,0 +1,163 @@
+@use "../styles/partials/global";
+
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
+@use "../styles/partials/typography" as *;
+
+
+.signup {
+
+    margin: 24px 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $black;
+    border-radius: 8px;
+    align-items: center;
+
+    &__logo {
+        width: 75%;
+    }
+
+    &__header {
+        @include page-header-mobile;
+    }
+
+    &__container--login {
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__input {
+        display: flex;
+        flex-direction: column;
+        @include body-copy-mobile;
+        padding: 5px;
+    }
+
+    &__label {
+        @include labels-buttons-mobile;
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__button {
+        @include labels-buttons-mobile;
+        margin: 16px 16px 8px 16px;
+        font-size: 0.75rem;
+        border-radius: 5px;
+        background-color: rgba(66, 133, 244, 0.8);
+        border: 1px solid rgba(66, 133, 244, 0.8);
+        color: $white;
+        padding: 5px;
+
+    }
+
+    &__cancel {
+        @include labels-buttons-mobile;
+        margin: 8px 16px 16px 16px;
+        background-color: $white;
+        border: none;
+    }
+
+    &__login {
+        display: flex;
+        margin-top: 16px;
+        border: 1px solid $black;
+        padding: 10px 40px;
+        border-radius: 5px  ;
+
+        &--now {
+
+        }
+
+        &--link {
+          margin-left: 8px;
+          text-decoration: none;
+          font-weight: 600;
+          color: rgba(66, 133, 244, 1);
+        }
+    }
+
+
+    @media only screen and (min-width: $tablet-breakpoint) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 200px 100px 160px;
+        padding: 0;
+        width: 60vw;
+        height: 80vh;
+
+        &__logo {
+            width: 75%;
+            height: 200px;
+        }
+
+        &__label {
+            @include labels-buttons;
+        }
+
+        &__input {
+            @include body-copy-mobile;
+        }
+
+        &__button {
+            @include labels-buttons;
+        }
+
+        &__cancel {
+            @include labels-buttons;
+        }
+
+    }
+
+    @media only screen and (min-width: $desktop-breakpoint) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 200px 100px 500px;
+        padding: 0;
+        width: 30vw;
+        height: 70vh;
+
+        &_title {}
+
+        &__container--login {}
+
+        &__input {}
+
+        &__button {}
+
+        &__cancel {}
+
+    }
+
+}
+
+input[type="text"] {
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    
+}
+
+input[type="password"] {
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+}
+
+input[type="email"] {
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+}

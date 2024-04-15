@@ -2,6 +2,8 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom"
 import UnauthenticatedHeader from "../../components/Header/UnauthenticatedHeader"
+import "./Login.scss"
+import skyquestBlackLogo from "../../assets/logos/skyquest-black.svg"
 
 const baseURL = "http://localhost:8080";
 const loginURL = `${baseURL}/login`;
@@ -41,22 +43,26 @@ const Login = () => {
 if (!isLoggedIn) return (
     <>
     <UnauthenticatedHeader />
-    <div>
-      <h1>Login</h1>
+    <div className="login">
+      <img className="login__logo" src={skyquestBlackLogo} alt="skyquest logo" />
       {isLoginError && <label className="error">{errorMessage}</label>}
-      <form className="form__container--login" onSubmit={handleLogin}>
-        <div className="form__input">
-          Username: <input type="text" name="username" />
+      <form className="login__container--login" onSubmit={handleLogin}>
+        <div className="login__input">
+          <label className="login__label">Username</label>
+          <input type="text" name="username" />
         </div>
-        <div className="form__input">
-          Password: <input type="password" name="password" />
+        <div className="login__input">
+        <label className="login__label">Password</label>
+        <input type="password" name="password" />
         </div>
-        <button type="submit" className="form__button">
-          Login
+        <div className="login__buttons">
+        <button type="submit" className="login__button">
+          Log in
         </button>
-        <button type="cancel" className="form__cancel">
-          X
+        <button type="cancel" className="login__cancel">
+          Cancel
         </button>
+        </div>
       </form>
     </div>
     </>

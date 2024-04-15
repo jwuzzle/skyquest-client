@@ -4,20 +4,17 @@
 @use "../styles/partials/mixins" as *;
 @use "../styles/partials/typography" as *;
 
-.challenges {
+.challengeshome {
     display: flex;
     flex-direction: column;
 
     &__hero-banner {
         display: flex;
-
     }
-    
+
     &__hero-image {
         width: 100%;
         height: 320px;
-      /*   top: 0;
-        left: 0; */
         z-index: -1;
     }
 
@@ -31,72 +28,40 @@
         color: rgba(255, 255, 255, 1);
         text-align: center;
         width: 80%;
+    }
 
-    }
-    &__hero-description {
-        font-size: .8rem;
-        line-height: 1rem;
-        font-weight: 600;
-        position: absolute;
-        left: 50%;
-        top: 45%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-        color: rgba(255, 255, 255, 1);
-        text-align: center;
-        width: 80%;
-    }
+    //end hero banner
 
     &__cards {
         display: flex;
         flex-direction: column;
         margin: 24px 16px 16px 16px;
-
-
-    &--content{
-        display: flex;
-        flex-direction: column;
         align-items: center;
-        padding: 16px;
-        border: 1px solid $black;
-    border-radius: 5px;
-    width: 70%;
-    height: fit-content;
-    justify-content: space-around;
-    padding: 16px;
-    box-shadow: 0 10px 30px 5px rgba(115, 61, 61, 0.2);
-    margin-bottom: 16px;
 
+        &--content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid $black;
+            border-radius: 5px;
+            width: 80%;
+            height: 350px;
+            padding: 16px;
+            box-shadow: 0 10px 30px 5px rgba(115, 61, 61, 0.2);
+            margin-bottom: 16px;
+        }
     }
-    
-    }
-
-    @media only screen and (min-width: $tablet-breakpoint) {
-
-
-    }
-    @media only screen and (min-width: $desktop-breakpoint) {}
-
-}
-
-.challenge {
-    display: flex;
-    flex-direction: column;
 
     &__image-container {
         display: flex;
-        flex-direction: row;
         width: 100%;
         justify-content: center;
-        align-items: center;
-        background-color: unset;
         border-radius: 5px;
     }
 
-    &__image{
+    &__image {
         width: 90px;
         height: 100px;
-        margin: 0px;
     }
 
     &__name {
@@ -117,33 +82,90 @@
         border-radius: 4px;
         text-decoration: none;
         padding: 3px 5px;
-        width: fit-content;
+        width: 50%;
         height: 20px;
-
+        margin-top: 16px;
+        text-align: center;
     }
 
     @media only screen and (min-width: $tablet-breakpoint) {
-        &__name {
-            @include section-header;
+        &__hero-banner {
+            justify-content: flex-start;
+            background-color: #214566;
         }
-    
+
+        &__hero-image {
+            width: fit-content;
+            height: 200px;
+            z-index: unset;
+            padding-left: 100px;
+        }
+
+        &__hero-text {
+            top: 20%;
+            left: 60%;
+            @include page-header;
+        }
+
+        &__cards {
+            margin: 24px 16px 16px 16px;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+            &--content {
+                width: 35%;
+                height: 400px;
+                justify-content: space-around;
+                margin-bottom: 36px;
+            }
+        }
+
+        &__name {
+            @include subheader;
+        }
+
         &__description {
             @include body-copy;
         }
-    
+
         &__button {
             @include labels-buttons;
         }
-
     }
+
     @media only screen and (min-width: $desktop-breakpoint) {
 
+        &__hero-image {
+            height: 320px;
+            padding-left: 200px;
+        }
 
+        &__hero-text {
+            top: 20%;
+            left: 45%;
+            @include page-header;
+        }
+
+        &__cards {
+            justify-content: center;
+
+            &--content {
+                width: 20%;
+                margin: 0 36px;
+                height: 480px;
+                margin-bottom: 36px;
+            }
+        }
+
+        &__image {
+            width: 175px;
+            height: 200px;
+        }
     }
 }
 
-
-.challenges__hero-banner::before {
+.challengeshome__hero-banner::before {
     content: "";
     display: block;
     position: absolute;
@@ -154,21 +176,22 @@
     background-color: rgba(0, 0, 0, 0.3);
 
     @media only screen and (min-width: $tablet-breakpoint) {
-        top: 8%;
-        height: 50.5vh;
+        top: 6.9%;
+        height: 200px;
+        z-index: 1;
     }
 
     @media only screen and (min-width: $desktop-breakpoint) {
-        top: 1%;
-        height: 52.5vh;
+        top: 6%;
+        height: 320px;
     }
 }
 
 
 .yellow {
     background-color: #FDC42D;
-} 
-   
+}
+
 .blue {
     background-color: #CCE9FA;
 }
