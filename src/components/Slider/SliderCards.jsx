@@ -60,7 +60,7 @@ const SliderCards = () => {
               />
             <div className="carousel__content">
             <h2 className="carousel__header">{travel.location}</h2>
-            <div className="carousel__description">{travel.description}</div>
+            <p className="carousel__description">{travel.description}</p>
           </div>
           </div>
         ))}

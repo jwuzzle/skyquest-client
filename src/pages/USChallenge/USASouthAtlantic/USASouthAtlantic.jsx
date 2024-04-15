@@ -278,6 +278,7 @@ const USASouthAtlantic = () => {
         image={usMapImage}
         text="Map of the usa with key landmarks on top of the map."
         header="The South Atlantic"
+        url="/challenges/us-states-challenge/"
       />
       <Description description="Embark on an exciting journey through the dynamic South Atlantic region, from Maryland to Florida. Discover rich history, diverse culture, and scenic wonders as you conquer each state and earn rewards along the way. Join the adventure and explore the vibrant charm of the South Atlantic!" />
       <div className="state-cards">

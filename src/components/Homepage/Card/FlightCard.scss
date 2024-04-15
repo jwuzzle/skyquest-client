@@ -15,7 +15,6 @@
     justify-content: space-around;
     padding: 16px;
     box-shadow: 0 10px 30px 5px rgba(115, 61, 61, 0.2);
-    ;
 
     &__header {
         @include section-header-mobile;
@@ -24,7 +23,6 @@
 
     &__subheader {
         @include subheader-mobile;
-        
     }
 
     &__bottom {
@@ -60,5 +58,60 @@
     &__image {
         width: 50px;
         height: 50px;
+    }
+
+    @media only screen and (min-width: $tablet-breakpoint) {
+        width: 40%;
+
+        &__header {
+            @include section-header;
+        }
+
+        &__subheader {
+            @include subheader;
+        }
+
+        &__button-container {
+            justify-content: flex-end;
+        }
+
+        &__button {
+            @include labels-buttons;
+            margin-left: 120px;
+            
+        }
+
+        &__image {
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    @media only screen and (min-width: $desktop-breakpoint) {
+        width: 20%;
+        height: 30%;
+
+        &__header {
+            @include section-header;
+        }
+
+        &__subheader {
+            @include subheader;
+        }
+
+        &__button-container {
+            justify-content: flex-end;
+        }
+
+        &__button {
+            @include labels-buttons;
+            margin-left: 120px;
+            
+        }
+
+        &__image {
+            width: 80px;
+            height: 80px;
+        }
     }
 }

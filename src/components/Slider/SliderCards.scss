@@ -47,8 +47,14 @@
 
     &:hover {
         h2 {
-            inset: auto auto 100px 15px;
+            inset: auto auto 200px 15px;
             transition: inset .3s ease-out;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            opacity: 1;
+            transition: opacity .5s .1s ease-in;
         }
     }
 
@@ -58,13 +64,16 @@
         opacity: 0;
         max-width: 80%;
         transition: opacity .3s ease-out;
-        inset: auto auto 10px 15px;
+        inset: auto auto 40px 15px;
         line-height: none;
+        background-color: rgba(0, 0, 0, 0.3);
 
     }
 
     &__flex {
         display: flex;
+        margin: 0 0 16px 0;
+        font-size: 30px;
     }
 
     &__buttons {
@@ -73,6 +82,7 @@
     }
 
     @media only screen and (min-width: $tablet-breakpoint) {
+        padding-top: 36px;
 
         &__header {
             @include subheader;
@@ -90,9 +100,10 @@
 
         &__card {
             flex-direction: row;
-            width: 13rem;
-            height: 16.5rem;
+            width: 19rem;
+            height: 25rem;
             margin: 0 12px;
+            justify-content: center;
         }
 
         &__flex {
@@ -128,13 +139,13 @@ img:hover {
     border-top: 1px solid black;
 
     @media only screen and (min-width: $tablet-breakpoint) {
-        @include page-header;
-        margin: 0 16px;
-        padding: 24px 16px 0 16px;
+        @include section-header;
+        padding: 36px 16px 36px 16px;
     }
 
     @media only screen and (min-width: $tablet-breakpoint) {
-        margin: 0 16px;
-        padding: 24px 16px 0 16px;
+        margin: 0 96px;
+        padding: 36px 16px 36px 0;
+
     }
 }

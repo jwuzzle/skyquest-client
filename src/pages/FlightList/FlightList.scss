@@ -5,15 +5,18 @@
 @use "../styles/partials/typography" as *;
 
 .flight-search {
+    display: flex;
+    flex-direction: column;
 
     &__container {
         position: relative;
-
+        display: flex;
+        flex-direction: column;
 
         &--image {
             object-fit: cover;
             width: 100%;
-            height: 100%;
+            height: 350px;
             top: 0;
             left: 0;
             z-index: -1;
@@ -21,58 +24,147 @@
 
         &--header1 {
             position: absolute;
-            top: 20%;
+            top: 10%;
             left: 10%;
-            /* transform:(-50%, -50%); */
             z-index: 1;
-            font-size: 60px;
+            @include page-header-mobile;
         }
+
         &--header2 {
             position: absolute;
-            top: 33%;
+            top: 20%;
             left: 20%;
-            /* transform:(-50%, -50%); */
             z-index: 1;
-            font-size: 60px;
+            @include page-header-mobile;
         }
 
         &--form {
             position: absolute;
-            top: 50%;
+            top: 35%;
             left: 20%;
-            /*  transform:(-50%, -50%); */
             z-index: 1;
             display: flex;
+            flex-direction: column;
         }
-
     }
 
     &__input {
         display: flex;
         flex-direction: column;
         align-items: baseline;
-        margin-right: 50px;
+        margin-bottom: 4px;
 
         &--label {
-            font-size: 18px;
-            margin-bottom: 8px;
+            @include labels-buttons-mobile;
         }
 
         &--dropdown {
-            padding: 25px 50px 25px 10px;
-            width: 300px;
+            padding: 5px;
+            width: 200px;
             border-radius: 20px;
         }
 
         &--button {
+            @include labels-buttons-mobile;
             color: $white;
             background-color: $black;
             border: none;
-            height: 40px;
-            width: 100px;
+            height: 25px;
+            width: 80px;
             border-radius: 10px;
-            margin-top: 45px;
+            margin-top: 4px;
         }
 
+        &--button-container {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__results-header {
+        @include section-header-mobile;
+        margin: 24px 0 0 16px;
+    }
+
+    @media only screen and (min-width: $tablet-breakpoint) {
+
+        &__container {
+
+            &--image {
+                height: unset;
+            }
+
+            &--header1 {
+                @include page-header;
+                top: 15%;
+            }
+
+            &--header2 {
+                @include page-header;
+                top: 30%;
+            }
+
+            &--form {
+                top: 55%;
+                left: 20%;
+                flex-direction: row;
+            }
+        }
+
+        &__input {
+            margin-right: 8px;
+
+            &--label {
+                @include labels-buttons;
+            }
+
+            &--dropdown {
+                width: 150px;
+            }
+
+            &--button {
+                @include labels-buttons;
+                margin-top: 4px;
+            }
+
+            &--button-container {
+                flex-direction: row;
+                align-items: flex-end;
+                margin-bottom: 7px;
+            }
+        }
+    }
+
+    @media only screen and (min-width: $desktop-breakpoint) {
+        &__container {
+
+            &--header1 {
+                left: 25%;
+            }
+
+            &--header2 {
+                left: 45%;
+            }
+
+            &--form {
+                left: 25%;
+            }
+        }
+
+        &__input {
+            margin-right: 36px;
+        }
+    }
+}
+
+
+.loading {
+
+    @media only screen and (min-width: $tablet-breakpoint) {
+        margin-left: 36px;
+    }
+
+    @media only screen and (min-width: $desktop-breakpoint) {
+        margin-left: 96px;
     }
 }

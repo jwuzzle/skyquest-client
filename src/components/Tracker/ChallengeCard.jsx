@@ -1,4 +1,7 @@
-import "./StateCounterCard.scss";
+//Cards used for the Amazing Race Challenge
+
+/* import "./StateCounterCard.scss"; */
+import "./ChallengeCard.scss";
 import checkIcon from "../../assets/icons/plane-circle-check-solid.svg";
 import { useState } from "react";
 
@@ -17,25 +20,24 @@ const ChallengeCard = (props) => {
   console.log(isClicked)
 
   return (
-      <section className="card">
-        <div className="state-card">
+      <section className="arcard">
+        <div className="arcard-state">
           <img
-            className="state-card__flag"
+            className="arcard-state__flag"
             src={props.image}
-            alt={`${props.continent} flag by allexxandar`}
+            alt={`Picture of continent:${props.continent}`}
           />
-          <div className="state-card__content">
+          <div className="arcard-state__content">
             <h2>{props.continent}</h2>
             <img
-              className={`card__complete-icon ${
+              className={`arcard__complete-icon ${
                 props.visited == "0" ? "off" : "on"
               }`}
               src={checkIcon}
             />
-            <p>{props.description}</p>
-            <p>{props.examples}</p>
+            <p>{props.description}{props.examples}</p>
             <button
-              className={`card__button ${props.visited == "0" ? "on" : "off"}`}
+              className={`arcard-state__button ${props.visited == "0" ? "on" : "off"}`}
               onClick={handleClick}
 
             >

@@ -206,6 +206,7 @@ const USANewEngland = () => {
         image={usMapImage}
         text="Map of the usa with key landmarks on top of the map."
         header="The Northeast New England"
+        url="/challenges/us-states-challenge/"
       />
       <Description description="Embark on an exciting journey through Northeast New England, from Maine to Connecticut. Explore historic cities, scenic wonders, and earn rewards with each state you conquer. Join the adventure and uncover the diverse charm of Northeast New England!" />
       <div className="state-cards">

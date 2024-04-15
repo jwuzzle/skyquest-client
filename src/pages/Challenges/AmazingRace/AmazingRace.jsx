@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
-import ChallengeBanner from "../../../components/Banners/ChallengeBanner";
 import AuthenticatedHeader from "../../../components/Header/AuthenticatedHeader";
 import { jwtDecode } from "jwt-decode";
 import contientData from "../../../data/continents.json";
@@ -9,6 +8,8 @@ import "../../../components/Tracker/StateCounterCard.scss";
 import ChallengeCard  from "../../../components/Tracker/ChallengeCard";
 import amazingRaceImg from "../../../assets/images/amazing_race.jpg"
 import Description from "../../../components/TextComponents/Descriptions/Description";
+
+import "./AmazingRace.scss"
 
 const URL = import.meta.env.VITE_APP_BASE_URL;
 
@@ -50,7 +51,6 @@ console.log(visitedContinents[0]?.south_america)
 //North America
 const [northAmerica, setNorthAmerica] = useState(false)
 const handleNorthAmericaClick = async (event) => {
-    event.preventDefault();
     setNorthAmerica(true);
 }
 const constUpdateTableNorthAmerica = async () => {
@@ -58,7 +58,7 @@ const constUpdateTableNorthAmerica = async () => {
       await axios.put(`${URL}/continents/${decoded.id}`, {
         north_america: northAmerica,
       });
-      alert("Another one checked off the list");
+      alert("Good job! Another one checked off the list.");
       navigate("/challenges/the-amazing-race");
       window.location.reload();
     } catch (error) {
@@ -73,7 +73,6 @@ useEffect(() => {
 //South America
 const [southAmerica, setSouthAmerica] = useState(false)
 const handleSouthAmericaClick = async (event) => {
-    event.preventDefault();
     setSouthAmerica(true);
 }
 const constUpdateTableSouthAmerica = async () => {
@@ -81,7 +80,7 @@ const constUpdateTableSouthAmerica = async () => {
       await axios.put(`${URL}/continents/${decoded.id}`, {
         south_america: southAmerica,
       });
-      alert("Another one checked off the list");
+      alert("Good job! Another one checked off the list.");
       navigate("/challenges/the-amazing-race");
       window.location.reload();
     } catch (error) {
@@ -96,7 +95,6 @@ const constUpdateTableSouthAmerica = async () => {
 //Europe
 const [europe, setEurope] = useState(false)
 const handleEuropeClick = async (event) => {
-    event.preventDefault();
     setEurope(true);
 }
 const constUpdateTableEurope = async () => {
@@ -104,7 +102,7 @@ const constUpdateTableEurope = async () => {
       await axios.put(`${URL}/continents/${decoded.id}`, {
         europe: europe,
       });
-      alert("Another one checked off the list");
+      alert("Good job! Another one checked off the list.");
       navigate("/challenges/the-amazing-race");
       window.location.reload();
     } catch (error) {
@@ -119,7 +117,6 @@ const constUpdateTableEurope = async () => {
 //Asia
 const [asia, setAsia] = useState(false)
 const handleAsiaClick = async (event) => {
-    event.preventDefault();
     setAsia(true);
 }
 const constUpdateTableAsia = async () => {
@@ -127,7 +124,7 @@ const constUpdateTableAsia = async () => {
       await axios.put(`${URL}/continents/${decoded.id}`, {
         asia: asia,
       });
-      alert("Another one checked off the list");
+      alert("Good job! Another one checked off the list.");
       navigate("/challenges/the-amazing-race");
       window.location.reload();
     } catch (error) {
@@ -142,7 +139,6 @@ const constUpdateTableAsia = async () => {
 //Africa
 const [africa, setAfrica] = useState(false)
 const handleAfricaClick = async (event) => {
-    event.preventDefault();
     setAfrica(true);
 }
 const constUpdateTableAfrica = async () => {
@@ -150,7 +146,7 @@ const constUpdateTableAfrica = async () => {
       await axios.put(`${URL}/continents/${decoded.id}`, {
         africa: africa,
       });
-      alert("Another one checked off the list");
+      alert("Good job! Another one checked off the list.");
       navigate("/challenges/the-amazing-race");
       window.location.reload();
     } catch (error) {
@@ -165,7 +161,6 @@ const constUpdateTableAfrica = async () => {
 //Australia
 const [australia, setAustralia] = useState(false)
 const handleAustraliaClick = async (event) => {
-    event.preventDefault();
     setAustralia(true);
 }
 const constUpdateTableAustralia = async () => {
@@ -173,7 +168,7 @@ const constUpdateTableAustralia = async () => {
       await axios.put(`${URL}/continents/${decoded.id}`, {
         australia: australia,
       });
-      alert("Another one checked off the list");
+      alert("Good job! Another one checked off the list.");
       navigate("/challenges/the-amazing-race");
       window.location.reload();
     } catch (error) {
@@ -190,11 +185,13 @@ const constUpdateTableAustralia = async () => {
   return (
     <main>
         <AuthenticatedHeader />
-        <ChallengeBanner
-        image={amazingRaceImg}
-        text="outline of the United States in red, white and blue: created by Allexxander"
-        header="The Amazing Race"
-      />
+      <section className="ar-challenge__banner">
+        <img className="ar-challenge__image" src={amazingRaceImg} alt="map with historical landmarks"/>
+        <Link className="ar-challenge__button" to="/challenges">
+          Back
+        </Link>
+        <h3 className="ar-challenge__header">The Amazing Race</h3>
+   </section>
       <Description description="Join 'The Amazing Race' challenge and embark on an extraordinary global adventure! Traverse the diverse continents of the world, from the bustling streets of Asia to the majestic landscapes of Africa and beyond. Explore the wonders of each continent, immerse yourself in unique cultures, and journey through captivating landscapes. Conquer 'The Amazing Race' by visiting at least one country in each continent (excluding Antarctica), and unlock a world of exhilarating rewards along your epic journey." />
       <section className="continent__cards">
         <ChallengeCard
