@@ -153,14 +153,18 @@
     }
 
     @media only screen and (min-width: $desktop-breakpoint) {
+  /*       margin: 0 0 24px 0; */
         display: flex;
-        margin: 0 0 24px 0;
+        padding: 0;
+        margin-top: 200px;
+        height: 400px;
+        margin-bottom: 200px;
 
         &__firstsection {
             display: flex;
             flex-direction: column;
             width: 50vw;
-            padding: 90px 36px 90px 132px;
+            padding: 90px 132px 90px 0;
             justify-content: center;
 
             &--header {
@@ -209,12 +213,12 @@
             justify-content: center;
 
             &--image {
-                width: 100%;
-                height: 80%;
-                padding: 0 36px 0 60px;
+                width: 500px;
+                height: 500px;
                 box-sizing: border-box;
-
-            }
+                margin: 0 132px 0 90px;
+                border-radius: 5px;
         }
+    }
     }
 }

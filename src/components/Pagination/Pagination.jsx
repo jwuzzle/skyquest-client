@@ -2,8 +2,6 @@ import './Pagination.scss'
 
 const Pagination = ({ totalFlights, flightsPerPage, paginate, currentPage, nextPage, prevPage }) => {
   const pageNumbers = [];
-  console.log(totalFlights);
-  console.log(flightsPerPage);
 
   const numPages = Math.ceil(totalFlights / flightsPerPage);
   if (totalFlights > 0) {

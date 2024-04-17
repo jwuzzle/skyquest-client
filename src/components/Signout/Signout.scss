@@ -13,11 +13,9 @@
 
     @media only screen and (min-width: $tablet-breakpoint) {
         @include labels-buttons;
-        margin: 0 0 36px 36px;
     }
 
     @media only screen and (min-width: $desktop-breakpoint) {
-        margin: 0 0 36px 85px;
     }
 }
 

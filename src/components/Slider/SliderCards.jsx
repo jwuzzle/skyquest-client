@@ -26,7 +26,7 @@ const SliderCards = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
-        setItemsPerPage(3);
+        setItemsPerPage(6);
       } else {
         setItemsPerPage(1);
       }
@@ -46,8 +46,8 @@ const SliderCards = () => {
 
   return (
     <section>
-      <h1 className="carousel-header">Top 2024 Destinations</h1>
     <div className="carousel">
+    <h1 className="carousel-header">Top 2024 Destinations</h1>
       <div className="carousel__group">
       {destinationData
         .slice(startIndex, startIndex + itemsPerPage)

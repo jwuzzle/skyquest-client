@@ -17,14 +17,34 @@
     }
 
     &__header {
-        @include video-overlay-mobile;
         position: absolute;
         top: 45%;
-        left: 51%;
+        left: 49%;
         transform: translate(-50%, -50%);
         z-index: 1;
-        color: rgba(255, 255, 255, 0.8);
         text-align: center;
+    }
+
+    &__copy {
+        @include video-overlay-mobile;
+        color: rgba(255, 255, 255, 0.8);
+
+    }
+
+    &__button-container {
+        position: absolute;
+        top: 105%;
+        left: 44%;
+    }
+
+    &__button {
+        color: $white;
+        border: 1px solid $white;
+        border-radius: 4px;
+        text-decoration: none;
+        margin: 16px;
+        padding: 8px 16px;
+        @include labels-buttons-mobile;
     }
 
     @media only screen and (min-width: $tablet-breakpoint) {
@@ -33,8 +53,16 @@
         }
 
         &__header {
-            @include video-overlay;
             width: 60%;
+        }
+        &__copy {
+        @include video-overlay;
+        margin-top: 16px;
+        }
+
+        &__button {
+            @include labels-buttons;
+            width: fit-content;
         }
     }
 
@@ -43,7 +71,7 @@
             height: 70vh;
         }
 
-        &__header {}
+    
     }
 
 }
