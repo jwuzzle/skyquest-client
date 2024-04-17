@@ -1,0 +1,135 @@
+@use "../styles/partials/global";
+
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
+@use "../styles/partials/typography" as *;
+
+.flight-instructions {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #E9E9E7;
+    border-radius: 4px;
+    fill: #FFFFFF;
+    padding: 16px;
+    margin: 36px;
+    box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+    
+    &__copy-top {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__header {
+        @include section-header-mobile;
+        margin-bottom: 16px;
+    }
+
+    &__subheader {
+        @include subheader-mobile;
+        margin-bottom: 16px;
+    }
+
+    &__copy-middle {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__ul-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        @include body-copy-mobile;
+        margin-bottom: 16px;
+    }
+
+    &__item-header {
+        font-weight: 600;
+    }
+
+
+    &__copy-bottom {
+        @include body-copy-mobile;
+    }
+
+
+    @media only screen and (min-width: $tablet-breakpoint) {
+
+        &__copy-top {}
+
+        &__header {
+            @include section-header;
+        }
+
+        &__subheader {
+            @include subheader;
+        }
+
+        &__copy-middle {
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        &__ul-list {
+            flex-direction: row;}
+
+        &__item {
+            @include body-copy;
+            width: 260px;
+            height: 400px;
+            padding: 24px;
+            margin: 36px 18px;
+            box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+            border: 1px solid #E9E9E7;
+        border-radius: 4px;
+        }
+
+        &__item-header {
+            font-weight: 600;
+            @include section-header;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        &__item-image {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            margin: 0 0 16px 50px;
+        }
+
+        &__item-description {
+            @include subheader;
+            font-weight: normal;
+
+        }
+
+        &__copy-bottom {
+            @include body-copy;
+        }
+    }
+
+    @media only screen and (min-width: $desktop-breakpoint) {
+
+        &__copy-top {}
+
+        &__header {}
+
+        &__subheader {}
+
+        &__copy-middle {
+        }
+
+        &__ul-list {}
+
+        &__item {}
+
+        &__copy-bottom {}
+    }
+
+
+}

@@ -96,12 +96,14 @@
         &__group {
             display: flex;
             flex-direction: row;
+            width: 100%;
+            justify-content: center;
         }
 
         &__card {
             flex-direction: row;
-            width: 19rem;
-            height: 25rem;
+            width: 15rem;
+            height: 20rem;
             margin: 0 12px;
             justify-content: center;
         }
@@ -113,9 +115,17 @@
     }
 
     @media only screen and (min-width: $desktop-breakpoint) {
+        border: 1px solid #E9E9E7;
+        border-radius: 4px;
+        fill: #FFFFFF;
+        padding: 36px;
+        margin: 36px;
+        box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2)
 
         &__card {
             margin: 0 20px;
+            width: 16rem;
+            height: 21rem;
         }
     }
 

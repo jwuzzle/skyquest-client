@@ -1,0 +1,21 @@
+@use "../styles/partials/global";
+
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
+@use "../styles/partials/typography" as *;
+
+
+.footer {
+    height: 100px;
+    background-color:$black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  
+
+    img {
+        width: 200px;
+        height: 100px;
+        margin-right: 96px;
+    }
+}

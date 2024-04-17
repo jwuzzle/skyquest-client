@@ -22,6 +22,10 @@
             z-index: -1;
         }
 
+        &--copy {
+            display: flex;
+        }
+
         &--header1 {
             position: absolute;
             top: 10%;
@@ -61,7 +65,7 @@
         &--dropdown {
             padding: 5px;
             width: 200px;
-            border-radius: 20px;
+            border-radius: 5px;
         }
 
         &--button {
@@ -71,7 +75,7 @@
             border: none;
             height: 25px;
             width: 80px;
-            border-radius: 10px;
+            border-radius: 5px;
             margin-top: 4px;
         }
 
@@ -90,24 +94,21 @@
 
         &__container {
 
-            &--image {
-                height: unset;
-            }
-
             &--header1 {
                 @include page-header;
-                top: 15%;
+                top: 35%;
+                left: 25%;
             }
 
             &--header2 {
                 @include page-header;
-                top: 30%;
+                top: 50%;
+                left: 25%;
             }
 
             &--form {
-                top: 55%;
-                left: 20%;
-                flex-direction: row;
+                top: 25%;
+                left: 55%;
             }
         }
 
@@ -139,15 +140,15 @@
         &__container {
 
             &--header1 {
-                left: 25%;
+
             }
 
             &--header2 {
-                left: 45%;
+
             }
 
             &--form {
-                left: 25%;
+
             }
         }
 
@@ -161,10 +162,51 @@
 .loading {
 
     @media only screen and (min-width: $tablet-breakpoint) {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 96px;
+    }
+
+    @media only screen and (min-width: $desktop-breakpoint) {}
+}
+
+
+.table-component {
+
+    @media only screen and (min-width: $tablet-breakpoint) {
+        border: 1px solid #E9E9E7;
+        border-radius: 4px;
+        fill: #FFFFFF;
+        padding: 16px;
+        margin: 36px;
+        box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2)
+    }
+
+    @media only screen and (min-width: $desktop-breakpoint) {
+        margin: 36px 96px;
+
+    }
+}
+
+.table-off {
+    display: none;
+}
+
+.table-on {}
+
+.table__header {
+    @include section-header-mobile;
+
+    @media only screen and (min-width: $tablet-breakpoint) {
+        @include section-header;
+        border-top: none;
         margin-left: 36px;
     }
 
     @media only screen and (min-width: $desktop-breakpoint) {
-        margin-left: 96px;
+        margin: 36px 96px 0 96px;
     }
+
 }
