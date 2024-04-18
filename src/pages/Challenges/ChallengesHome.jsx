@@ -1,6 +1,7 @@
 import heroBanner from "../../assets/images/challenges_hero.jpg";
 import usaChallengeImage from "../../assets/images/usa_challenge.png";
 import amazingRaceImage from "../../assets/images/amazing_race.jpg";
+import rome from "../../assets/images/rome.png"; 
 import { Link } from "react-router-dom";
 import AuthenticatedHeader from "../../components/Header/AuthenticatedHeader";
 import Description from "../../components/TextComponents/Descriptions/Description";
@@ -64,6 +65,25 @@ const ChallengesHome = () => {
             to="/challenges/the-amazing-race"
           >
             Ready, Set, Go!
+          </Link>
+        </div>
+        <div className="challengeshome__cards--content">
+          <div className="challengeshome__image-container gray">
+            <img
+              className="challengeshome__image rome__image"
+              src={rome}
+              alt="location with phone and map"
+            />
+          </div>
+          <p className="challengeshome__name">The World Wonders</p>
+          <p className="challengeshome__description">
+          Journey across continents, immersing yourself in the richness of different cultures and landscapes. From the Great Wall of China to Machu Picchu, each wonder holds its own allure and history.
+          </p>
+          <Link
+            className="challengeshome__button"
+            to="/challenges/the-world-wonders"
+          >
+            Be Amazed!
           </Link>
         </div>
       </section>

@@ -1,0 +1,32 @@
+@use "../styles/partials/global";
+
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
+@use "../styles/partials/typography" as *;
+
+.under-construction {
+    display: flex;
+    justify-content: center;
+
+
+&__copy {
+    @include page-header-mobile;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 0;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+}
+
+@media only screen and (min-width: $tablet-breakpoint) {
+    &__copy {
+        @include page-header;
+    }
+}
+
+@media only screen and (min-width: $desktop-breakpoint) {
+}
+
+}

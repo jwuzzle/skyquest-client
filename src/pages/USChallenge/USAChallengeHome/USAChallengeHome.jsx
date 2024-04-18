@@ -7,6 +7,10 @@ import neMidAtlanticImg from "../../../assets/images/ne_mid_atlantic.jpg";
 import southAtlanticImg from "../../../assets/images/south_atlantic.jpg";
 import southEastCentralImg from "../../../assets/images/south_east_central.jpg";
 import pacificWestImg from "../../../assets/images/pacific_west.jpg"
+import southwestCentralImg from "../../../assets/images/southwest_central.jpg";
+import midwestEastImg from "../../../assets/images/midwest_east.jpg";
+import midwestWestImg from "../../../assets/images/midwest_west.jpg";
+import mountainWestImg from "../../../assets/images/mountain_west.jpg"
 import "../USAChallengeHome/USAChallengeHome.scss";
 
 const ChallengesHome = () => {
@@ -28,6 +32,30 @@ const ChallengesHome = () => {
       </section>
       <Description description="Embark on a journey across the United States and explore the rich tapestry of each state's culture, history, and natural wonders. From the majestic Grand Canyon to the vibrant streets of New York City, there's endless adventure awaiting you. As you explore each state, come back here and mark it off the list by clicking on the cards below. Once you've explored all of the US, you'll earn extra reward miles! Get ready to discover the beauty and diversity of America's states in this thrilling challenge!" />
       <section className="challenges__cards">
+      <div className="challenges__cards--content">
+          <div className="challenge__image-container palegreen">
+            <img
+              className="challenge__image"
+              src={newEnglandImg}
+              alt="location with phone and map"
+            />
+          </div>
+          <p className="challenge__name--nomargin">
+            Region: The Northeast New England
+          </p>
+          <p className="challenge__description">
+            Embark on an exciting journey through Northeast New England, from
+            Maine to Connecticut. Explore historic cities, scenic wonders, and
+            earn rewards with each state you conquer. Join the adventure and
+            uncover the diverse charm of Northeast New England!
+          </p>
+          <Link
+            className="challenge__button"
+            to="/challenges/us-states-challenge/northeast-new-england"
+          >
+            Let's Go!
+          </Link>
+        </div>
         <div className="challenges__cards--content">
           <div className="challenge__image-container palegreen">
             <img
@@ -48,30 +76,6 @@ const ChallengesHome = () => {
           <Link
             className="challenge__button"
             to="/challenges/us-states-challenge/northeast-mid-atlantic"
-          >
-            Let's Go!
-          </Link>
-        </div>
-        <div className="challenges__cards--content">
-          <div className="challenge__image-container palegreen">
-            <img
-              className="challenge__image"
-              src={newEnglandImg}
-              alt="location with phone and map"
-            />
-          </div>
-          <p className="challenge__name--nomargin">
-            Region: The Northeast New England
-          </p>
-          <p className="challenge__description">
-            Embark on an exciting journey through Northeast New England, from
-            Maine to Connecticut. Explore historic cities, scenic wonders, and
-            earn rewards with each state you conquer. Join the adventure and
-            uncover the diverse charm of Northeast New England!
-          </p>
-          <Link
-            className="challenge__button"
-            to="/challenges/us-states-challenge/northeast-new-england"
           >
             Let's Go!
           </Link>
@@ -129,6 +133,91 @@ const ChallengesHome = () => {
           <div className="challenge__image-container palegreen">
             <img
               className="challenge__image"
+              src={southwestCentralImg}
+              alt="location with phone and map"
+            />
+          </div>
+        <p className="challenge__name--nomargin">
+        Region: The South West Central
+          </p>
+          <p className="challenge__description">
+          Embark on a journey through the dynamic South West Central region, from the bayous of Louisiana to the plains of Oklahoma and Texas. Explore the rich cultures and diverse landscapes of Arkansas, Louisiana, Oklahoma, and Texas, embracing the warmth of Southern hospitality and the allure of the South West Central's vibrant spirit!
+          </p>
+          <Link
+            className="challenge__button"
+            to="/challenges/us-states-challenge/south-west-central"
+          >
+            Let's Go!
+          </Link>
+          </div>
+        
+        <div className="challenges__cards--content">
+          <div className="challenge__image-container palegreen">
+            <img
+              className="challenge__image"
+              src={pacificWestImg}
+              alt="location with phone and map"
+            />
+          </div>
+        <p className="challenge__name--nomargin">
+            Region: The Midwest East
+          </p>
+          <p className="challenge__description">
+          Embark on a captivating journey through the heartland of America in the Midwest East, from vibrant cities to serene lakeshores. Explore Ohio, Illinois, Wisconsin, Indiana, and Michigan, uncovering hidden gems and embracing the region's rich culture and landscapes!
+          </p>
+          <Link
+            className="challenge__button"
+            to="/challenges/us-states-challenge/midwest-east"
+          >
+            Let's Go!
+          </Link>
+        </div>
+        <div className="challenges__cards--content">
+          <div className="challenge__image-container palegreen">
+            <img
+              className="challenge__image"
+              src={midwestEastImg}
+              alt="location with phone and map"
+            />
+          </div>
+        <p className="challenge__name--nomargin">
+            Region: The Midwest West
+          </p>
+          <p className="challenge__description">
+          Embark on a journey through the vast Midwest West, from the rugged Badlands to the fertile plains of South Dakota, North Dakota, Nebraska, Kansas, Minnesota, Iowa, and Missouri. Discover the rich culture and history of the region as you traverse bustling cities and quaint rural communities, embracing the timeless charm of the Midwest West!
+          </p>
+          <Link
+            className="challenge__button"
+            to="/challenges/us-states-challenge/midwest-west"
+          >
+            Let's Go!
+          </Link>
+          </div>
+          <div className="challenges__cards--content">
+          <div className="challenge__image-container palegreen">
+            <img
+              className="challenge__image"
+              src={mountainWestImg}
+              alt="location with phone and map"
+            />
+          </div>
+        <p className="challenge__name--nomargin">
+        Region: The Mountain West
+          </p>
+          <p className="challenge__description">
+          Embark on a thrilling journey through the awe-inspiring Mountain West region, from the deserts of Arizona to the peaks of Montana. Explore the rugged landscapes and vibrant cultures of Arizona, Colorado, Utah, New Mexico, Nevada, Wyoming, Idaho, and Montana, embracing the adventure and beauty of the Mountain West!
+          </p>
+          <Link
+            className="challenge__button"
+            to="/challenges/us-states-challenge/west-mountain"
+          >
+            Let's Go!
+          </Link>
+          </div>
+          <div className="challenges__cards--content">
+          <div className="challenge__image-container palegreen">
+            <img
+              className="challenge__image"
               src={pacificWestImg}
               alt="location with phone and map"
             />
@@ -141,7 +230,7 @@ const ChallengesHome = () => {
           </p>
           <Link
             className="challenge__button"
-            to="/challenges/us-states-challenge/south-east-central"
+            to="/challenges/us-states-challenge/west-pacific"
           >
             Let's Go!
           </Link>
