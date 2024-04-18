@@ -93,6 +93,9 @@
         }
 
         &__cards {
+            flex-wrap: wrap;
+
+
             &--content {
                 width: 50%;
             }
@@ -126,6 +129,10 @@
         }
     }
 }
+
+.challenges__cards>* {
+    flex: 1 1 300px;
+  }
 
 .challenge {
     display: flex;

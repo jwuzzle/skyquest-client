@@ -12,7 +12,12 @@ import USANewEngland from "./pages/USChallenge/USANewEngland/USANewEngland";
 import USASouthAtlantic from "./pages/USChallenge/USASouthAtlantic/USASouthAtlantic";
 import USASouthEastCentral from "./pages/USChallenge/USASouthEastCentral/USASouthEastCentral"
 import USAPacificWest from "./pages/USChallenge/USAPacificWest/USAPacificWest"
+import USAMidwestEast from "./pages/USChallenge/USAMidwestEast/USAMidwestEast"
+import USAMidwestWest from "./pages/USChallenge/USAMidwestWest/USAMidwestWest"
+import USASouthWestCentral from "./pages/USChallenge/USASouthWestCentral/USASouthWestCentral"
+import USAMountainWest from "./pages/USChallenge/USAMountainWest/USAMountainWest"
 import TheAmazingRace from "./pages/Challenges/AmazingRace/AmazingRace"
+import WorldWonders from "./pages/Challenges/WorldWonders/WorldWonders"
 import "../styles/partials/_typography.scss";
 import "./App.scss";
 
@@ -34,12 +39,12 @@ function App() {
           <Route path="/challenges/us-states-challenge/south-atlantic" element={<USASouthAtlantic />} />
           <Route path="/challenges/us-states-challenge/south-east-central" element={<USASouthEastCentral />} />
           <Route path="/challenges/us-states-challenge/west-pacific" element={<USAPacificWest />} />
-          {/* <Route path="/challenges/us-states-challenge/south-west-central" element={<USChallenge />} />
-          <Route path="/challenges/us-states-challenge/midwest-west" element={<USChallenge />} />
-          <Route path="/challenges/us-states-challenge/midwest-east" element={<USChallenge />} />
-          <Route path="/challenges/us-states-challenge/west-pacific" element={<USAPacificWest />} />
-          <Route path="/challenges/us-states-challenge/west-mountain" element={<USChallenge />} /> */}
+          <Route path="/challenges/us-states-challenge/midwest-east" element={<USAMidwestEast />} />
+          <Route path="/challenges/us-states-challenge/midwest-west" element={<USAMidwestWest />} />
+          <Route path="/challenges/us-states-challenge/south-west-central" element={<USASouthWestCentral />} />
+          <Route path="/challenges/us-states-challenge/west-mountain" element={<USAMountainWest />} />
           <Route path="/challenges/the-amazing-race" element={<TheAmazingRace />} />
+          <Route path="/challenges/the-world-wonders" element={<WorldWonders />} />
         </Routes>
       </BrowserRouter>
     </>
