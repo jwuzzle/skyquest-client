@@ -43,7 +43,10 @@ const Signup = () => {
       <>
       <UnauthenticatedHeader />
         <div className="signup">
+          <div>
         <img className="signup__logo" src={skyquestBlackLogo} alt="skyquest logo" />
+        </div>
+        <div className="signup__fields">
           <h1 className="signup__header">Create an account</h1>
           <form className="signup__container--signup" onSubmit={handleSignup}>
             <div className="signup__input">
@@ -75,12 +78,14 @@ const Signup = () => {
             </button>
             </div>
           </form>
+          </div>
+          </div>
           <div className="signup__login">
             <p className="signup__login--now">Have an account?</p>
             <Link to={"/login"} className="signup__login--link">
               <p>Log in</p></Link>
           </div>
-        </div>
+        
       </>
     );
 };

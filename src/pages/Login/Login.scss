@@ -64,21 +64,28 @@
 
 
     @media only screen and (min-width: $tablet-breakpoint) {
-        display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        margin: 36px;
+        padding: 36px;
+        max-width: 100%;
+        height: 100%;
         justify-content: center;
-        align-items: center;
-        margin: 100px 200px 100px 240px;
-        padding: 0;
-        width: 40vw;
-        height: 60vh;
+
+        &__logo {
+            width: 200px;
+        }
+
+        &__container--login {
+            width: 30%;
+            margin-left: 36px;
+        }
 
         &__label {
             @include labels-buttons;
         }
 
         &__input {
-            @include body-copy-mobile;
+            @include body-copy;
         }
 
         &__button {
@@ -92,24 +99,13 @@
     }
 
     @media only screen and (min-width: $desktop-breakpoint) {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 100px 200px 100px 540px;
-        padding: 0;
-        width: 20vw;
-        height: 60vh;
+        max-width: 100%;
+        margin: 150px 300px;
 
-        &_title {}
+        &__container--login {
+            margin-left: 60px;
+        }
 
-        &__container--login {}
-
-        &__input {}
-
-        &__button {}
-
-        &__cancel {}
 
     }
 

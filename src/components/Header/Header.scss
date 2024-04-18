@@ -61,7 +61,7 @@
         justify-content: space-between;
 
         &__logo-container {
-            padding-left: 36px;
+            padding-left: 96px;
         }
 
         &__logo {
@@ -73,7 +73,7 @@
             @include labels-buttons;
             font-weight: 400;
             justify-content: flex-end;
-            padding-right: 36px;
+            padding-right: 96px;
         }
 
         &__linkLogin {

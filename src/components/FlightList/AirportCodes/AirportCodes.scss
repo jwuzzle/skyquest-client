@@ -1,0 +1,96 @@
+@use "../styles/partials/global";
+
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
+@use "../styles/partials/typography" as *;
+
+
+.airport-search {
+
+&__container--form {
+
+}
+
+&__input {
+
+}
+&__input--label {
+
+}
+
+&__input--dropdown {
+
+}
+&__input--button-container {
+
+}
+&__input--button {
+    @include labels-buttons-mobile;
+    color: $white;
+    background-color: $black;
+    border: none;
+    height: 25px;
+    width: 80px;
+    border-radius: 5px;
+    margin-top: 4px;
+
+}
+
+@media only screen and (min-width: $tablet-breakpoint) {
+    display: flex;
+    justify-content: center;
+    padding: 36px 0;
+
+    &__container--form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    &__input {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input--label {
+        margin-bottom: 24px;
+    }
+    
+    &__input--text {
+        margin-bottom: 24px;
+        width: 100px;
+    }
+    &__input--button-container {
+    
+    }
+    &__input--button {
+        @include labels-buttons;
+    }
+}
+
+@media only screen and (min-width: $desktop-breakpoint) {
+
+}
+
+}
+
+
+.airport-table-component {
+
+    @media only screen and (min-width: $tablet-breakpoint) {
+       /*  border: 1px solid #E9E9E7;
+        border-radius: 4px;
+        fill: #FFFFFF;
+        padding: 16px;
+        margin: 36px;
+        box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2) */
+    }
+
+    @media only screen and (min-width: $desktop-breakpoint) {
+      /*   margin: 36px 96px; */
+
+    }
+}
+
+.airport-table-off {
+    display: none;
+}

@@ -82,6 +82,7 @@
             top: 9%;
             left: 5%;
             font-weight: normal;
+            padding: 16px;
         }
 
         &__hero-text {
@@ -183,6 +184,8 @@
 
         &__button {
             @include labels-buttons;
+            height: unset;
+            margin: 0px;
         }
     }
 

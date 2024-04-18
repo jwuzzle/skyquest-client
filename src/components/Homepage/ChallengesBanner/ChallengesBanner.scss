@@ -8,19 +8,18 @@
 .home-challenge {
   display: flex;
   flex-direction: column;
-  border: 1px solid $black;
+  border: 1px solid #E9E9E7;
   border-radius: 5px;
   width: 70%;
   height: 25vh;
-  justify-content: space-around;
   padding: 16px;
-  box-shadow: 0 10px 30px 5px rgba(115, 61, 61, 0.2);
+  box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
   margin-bottom: 16px;
 
   &__details {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
   }
 
 
@@ -33,13 +32,13 @@
     @include section-header-mobile;
   }
 
-  &__details-bottom {
-    display: flex;
-    align-items: center;
-  }
 
   &__description {
     @include body-copy-mobile;
+  }
+
+  &__details-bottom {
+    display: flex;
   }
 
   &__button {
@@ -52,10 +51,13 @@
     padding: 3px 5px;
     width: fit-content;
     height: 40px;
+align-items: flex-end;
   }
 
   @media only screen and (min-width: $tablet-breakpoint) {
-    width: 40%;
+    width: 300px;
+    height: 250px;
+    justify-content: space-between;
 
     &__image {
       width: 80px;
@@ -68,14 +70,13 @@
       margin-right: 6px;
     }
 
-    &__details-bottom {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
 
     &__description {
       @include body-copy;
+    }
+
+    &__details-bottom {
+      display: flex;
     }
 
     &__button {
@@ -88,28 +89,32 @@
   }
 
   @media only screen and (min-width: $desktop-breakpoint) {
-    width: 20%;
+    width: 320px;
+    height: 320px;
+    overflow: hidden;
 
     &__image {
-      width: 80px;
-      height: 80px;
+      width: 150px;
+      height: 150px;
       margin-left: 24px;
       margin-right: 16px;
+      overflow: hidden;
     }
 
     &__title {
       @include section-header;
-      margin-right: 6px;
+      margin: 20px 6px 20px 0;
+    }
+
+
+    &__description {
+      @include body-copy;
     }
 
     &__details-bottom {
       display: flex;
       flex-direction: column;
-      align-items: center;
-    }
-
-    &__description {
-      @include body-copy;
+      align-items: flex-end;
     }
 
     &__button {
@@ -121,4 +126,14 @@
 
   }
 
+}
+
+.image-container {
+  height: 100px;
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
 }

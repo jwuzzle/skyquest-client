@@ -5,6 +5,7 @@
 @use "../styles/partials/typography" as *;
 
 .table__header {
+
     @include section-header-mobile;
     @media only screen and (min-width: $tablet-breakpoint) {
         @include section-header;
@@ -12,7 +13,7 @@
         margin-left: 36px;
     }
     @media only screen and (min-width: $desktop-breakpoint) {
-        margin-left: 96px;
+        margin-left: 0;
     }
 
 }
@@ -22,22 +23,33 @@
 
     @media only screen and (min-width: $tablet-breakpoint) {
     display: flex;
-    border-bottom: 1px solid black;
-    margin: 36px 36px 0 36px;
+    border-bottom: 1px solid #E9E9E7;
+    padding-bottom: 8px;
     justify-content: space-around;
+
+    &__group {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icons {
+        width: 20px;
+        height: 20px;
+        margin-right: 4px;
+    }
 
     &__date {
         @include body-copy;
         display: flex;
         align-items: center;
-        width: 100px;
+        width: 80px;
         font-weight: 600;
     }
     &__origin {
         @include body-copy;
         display: flex;
         align-items: center;
-        width: 100px;
+        width: 80px;
         font-weight: 600;
     }
     &__destination {
@@ -45,27 +57,27 @@
         line-height: 1rem;
         align-items: center;
         display: flex;
-        width: 100px;
+        width: 80px;
         font-weight: 600;
     }
     
     &__economy {
         @include body-copy;
         text-align: center;
-        width: 100px;
+        width: 80px;
         border-radius: 15px;
         color: green;
         text-transform:uppercase;
         font-weight: 600;
         display: flex;
-        justify-content: center;
+        /* justify-content: center; */
         align-items: center;
     }
 
     &__premium {
         @include body-copy;
         text-align: center;
-        width: 100px;
+        width: 80px;
         border-radius: 15px;
         color: orange;
         text-transform:uppercase;
@@ -78,7 +90,7 @@
     &__business {
         @include body-copy;
         text-align: center;
-        width: 100px;
+        width: 80px;
         border-radius: 15px;
         color: blue;
         text-transform:uppercase;
@@ -91,7 +103,7 @@
     &__first {
         @include body-copy;
         text-align: center;
-        width: 100px;
+        width: 80px;
         border-radius: 15px;
         color: purple;
         text-transform:uppercase;
@@ -103,7 +115,20 @@
 }
 @media only screen and (min-width: $desktop-breakpoint) {
     justify-content: space-between;
-    margin: 36px 96px 0 96px;
+    margin: 0;
+
+    &__group {
+        display: flex;
+        justify-content: center;
+        width: 150px;
+        padding-left: 30px;
+    }
+
+        &__group--date {
+            width: 125px;
+            padding-left: 0px;
+        }
+    
 
     &__date {
         width: 150px;
@@ -121,21 +146,21 @@
 
     &__economy {
         width: 150px;
-      
+        justify-content: unset;  
     }
     &__premium {
         width: 150px;
-       
+        justify-content: unset;  
     }
 
     &__business {
         width: 150px;
-
+        justify-content: unset;  
     }
 
     &__first {
         width: 150px;
-
+        justify-content: unset;  
     }
 
 }
