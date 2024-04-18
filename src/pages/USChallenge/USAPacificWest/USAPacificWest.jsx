@@ -184,39 +184,47 @@ const USAPacific = () => {
         header="The Pacific West"
         url="/challenges/us-states-challenge/"
       />
-      <Description description="Embark on an exhilarating expedition through the captivating Southeast Central region, spanning Mississippi, Alabama, Tennessee, and Kentucky. Dive into a tapestry of heritage, culture, and natural marvels as you traverse each state, unlocking treasures and triumphs. Prepare for an adventure filled with discovery and the allure of the Southeast Central's vibrant spirit!" />
+      <Description description="Embark on an awe-inspiring journey through the enchanting Pacific West region, encompassing the breathtaking landscapes and diverse cultures of Washington, Oregon, California, Alaska, and Hawaii. Immerse yourself in a mosaic of natural wonders, from the majestic peaks of the Cascade Range to the rugged coastlines of the Pacific Ocean. Explore the vibrant cities and charming towns nestled amidst lush forests and sun-kissed shores. Prepare for an expedition brimming with discovery, adventure, and the boundless allure of the Pacific West's captivating spirit!" />
       <div className="state-cards">
         <StateCounter
-          state={statesData[17].state}
-          state_code={statesData[17].state_code}
-          description={statesData[17].state_description}
-          visited={visitedDetails[0]?.ky === 0 ? "0" : "1"}
-          onButtonClick={handleKyClick}
-          image={statesData[17].image}
+          state={statesData[47].state}
+          state_code={statesData[47].state_code}
+          description={statesData[47].state_description}
+          visited={visitedDetails[0]?.wa === 0 ? "0" : "1"}
+          onButtonClick={handleWaClick}
+          image={statesData[47].image}
         />
         <StateCounter
-          state={statesData[42].state}
-          state_code={statesData[42].state_code}
-          description={statesData[42].state_description}
-          visited={visitedDetails[0]?.tn === 0 ? "0" : "1"}
-          onButtonClick={handleTnClick}
-          image={statesData[42].image}
+          state={statesData[37].state}
+          state_code={statesData[37].state_code}
+          description={statesData[37].state_description}
+          visited={visitedDetails[0]?.or === 0 ? "0" : "1"}
+          onButtonClick={handleOrClick}
+          image={statesData[37].image}
         />
         <StateCounter
-          state={statesData[0].state}
-          state_code={statesData[0].state_code}
-          description={statesData[0].state_description}
-          visited={visitedDetails[0]?.al === 0 ? "0" : "1"}
-          onButtonClick={handleAlClick}
-          image={statesData[0].image}
+          state={statesData[4].state}
+          state_code={statesData[4].state_code}
+          description={statesData[4].state_description}
+          visited={visitedDetails[0]?.ca === 0 ? "0" : "1"}
+          onButtonClick={handleCaClick}
+          image={statesData[4].image}
         />
         <StateCounter
-          state={statesData[24].state}
-          state_code={statesData[24].state_code}
-          description={statesData[24].state_description}
-          visited={visitedDetails[0]?.ms === 0 ? "0" : "1"}
-          onButtonClick={handleMsClick}
-          image={statesData[24].image}
+          state={statesData[1].state}
+          state_code={statesData[1].state_code}
+          description={statesData[1].state_description}
+          visited={visitedDetails[0]?.ak === 0 ? "0" : "1"}
+          onButtonClick={handleAkClick}
+          image={statesData[1].image}
+        />
+        <StateCounter
+          state={statesData[11].state}
+          state_code={statesData[11].state_code}
+          description={statesData[11].state_description}
+          visited={visitedDetails[0]?.hi === 0 ? "0" : "1"}
+          onButtonClick={handleHiClick}
+          image={statesData[11].image}
         />
       </div>
     </>
