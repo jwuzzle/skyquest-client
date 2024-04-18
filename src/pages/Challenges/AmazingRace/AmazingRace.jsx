@@ -4,7 +4,6 @@ import axios from "axios";
 import AuthenticatedHeader from "../../../components/Header/AuthenticatedHeader";
 import { jwtDecode } from "jwt-decode";
 import contientData from "../../../data/continents.json";
-import "../../../components/Tracker/StateCounterCard.scss";
 import ChallengeCard  from "../../../components/Tracker/ChallengeCard";
 import amazingRaceImg from "../../../assets/images/amazing_race.jpg"
 import Description from "../../../components/TextComponents/Descriptions/Description";
@@ -39,7 +38,6 @@ useEffect(() => {
 
 useEffect(() => {
   if (visitedContinents.length > 0) {
-    console.log(visitedContinents[0].az);
   }
 }, [visitedContinents]);
 

@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import USChallenge from "./pages/MapPage"
-import ContinentsChallenge from "./pages/Continents/Continents"
 import FlightListPage from "./pages/FlightList/FlightList";
 import LandingPage from "../src/pages/LandingPage/LandingPage";
 import Homepage from "../src/pages/Homepage/Homepage";

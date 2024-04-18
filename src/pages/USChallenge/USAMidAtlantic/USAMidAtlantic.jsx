@@ -54,22 +54,16 @@ const USAMidAtlantic = () => {
   }, []);
 
   const navigate = useNavigate();
-  const [ny, setNy] = useState(false);
-  const [nj, setNj] = useState(false);
-  const [pa, setPa] = useState(false);
 
+  const [ny, setNy] = useState(false);
   const handleNyClick = async (event) => {
     setNy(true);
   };
-
-  const handleNjClick = async (event) => {
-    setNj(true);
-  };
-
-  const handlePaClick = async (event) => {
-    setPa(true);
-  };
-
+  useEffect(() => {
+    if (ny) {
+      constUpdateTableNy();
+    }
+  }, [ny]);
   const constUpdateTableNy = async () => {
     try {
       await axios.put(`${URL}/us-states-challenge/${decoded.id}`, {
@@ -83,6 +77,15 @@ const USAMidAtlantic = () => {
     }
   };
 
+  const [nj, setNj] = useState(false);
+  const handleNjClick = async (event) => {
+    setNj(true);
+  };
+  useEffect(() => {
+    if (nj) {
+      constUpdateTableNj();
+    }
+  }, [nj]);
   const constUpdateTableNj = async () => {
     try {
       await axios.put(`${URL}/us-states-challenge/${decoded.id}`, {
@@ -94,6 +97,18 @@ const USAMidAtlantic = () => {
     } catch (error) {
       console.error("Error updating 'nj' value:", error);
     }
+  };
+
+  const [pa, setPa] = useState(false);
+
+  const handlePaClick = async (event) => {
+    setPa(true);
+
+    useEffect(() => {
+      if (pa) {
+        constUpdateTablePa();
+      }
+    }, [pa]);
   };
 
   const constUpdateTablePa = async () => {
@@ -108,24 +123,6 @@ const USAMidAtlantic = () => {
       console.error("Error updating 'pa' value:", error);
     }
   };
-
-  useEffect(() => {
-    if (ny) {
-      constUpdateTableNy();
-    }
-  }, [ny]);
-
-  useEffect(() => {
-    if (nj) {
-      constUpdateTableNj();
-    }
-  }, [nj]);
-
-  useEffect(() => {
-    if (pa) {
-      constUpdateTablePa();
-    }
-  }, [pa]);
 
   return (
     <>
